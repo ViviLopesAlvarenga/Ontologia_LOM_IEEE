@@ -1,0 +1,1972 @@
+@prefix : <http://dados.ufes.br/lomieee/onto#> .
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix wdo: <http://www.wikidata.org/ontology#> .
+@prefix data: <http://dados.ufes.br/lomieee/data#> .
+@prefix gn: <https://sws.geonames.org/> .
+@prefix wde: <http://www.wikidata.org/entity/> .
+
+<http://dados.ufes.br/lomieee/onto#> a owl:Ontology .
+
+<http://dados.ufes.br/lomieee#> a owl:Ontology;
+  rdfs:label "OntoLOM-IEEE";
+  rdfs:comment "Ontologia desenvolvida como parte da dissertação de Mestrado do PPGCI/UFES da aluna Viviane Bessa Lopes Alvarenga"@pt-BR;
+  owl:versionInfo "1.0";
+  dct:title "Ontologia aplicada a Objetos de Aprendizagem com base no Padrão LOM da IEEE/2020"@pt-BR;
+  dct:contributor "Henrique M. Cristovao";
+  dct:description "Ontologia operacional aplicada a Objetos de Aprendizagem com base no Padrão LOM da IEEE/2020"@pt-BR;
+  dct:creator "Viviane Bessa Lopes Alvarenga";
+  dct:created "2023-02-01"^^xsd:date;
+  dct:modified "2023-03-07"^^xsd:date;
+  cc:licence "https://creativecommons.org/licenses/by-sa/4.0/"^^xsd:anyURI .
+
+:LearningObject a owl:Class;
+  rdfs:label "Learning Object"@en, "Objeto de Aprendizagem"@pt-BR;
+  owl:equivalentClass wdo:Q1062461 .
+
+:GeneralStruture a skos:ConceptScheme;
+  skos:prefLabel "General Struture"@en, "Estrutura Geral"@pt-BR;
+  skos:note "Estrutura organizacional subjacente do objeto de aprendizagem"@pt-BR .
+
+:GeneralAggregationLevel a skos:ConceptScheme;
+  skos:prefLabel "General Aggregation Level"@en, "Nível de Granularidade"@pt-BR;
+  skos:note "Granularidade funcional desse objeto de aprendizagem"@pt-BR .
+
+:LifeCycleStatus a skos:ConceptScheme;
+  skos:prefLabel "Life Cycle Status"@en, "Status do Ciclo de Vida"@pt-BR;
+  skos:note "status ou condição de conclusão deste objeto de aprendizagem"@pt-BR .
+
+:LifeCycleContributeRole a skos:ConceptScheme;
+  skos:prefLabel "Life Cycle Contribute Role"@en, "Papel do Contribuidor"@pt-BR;
+  skos:note "Papel do contribuidor. No mínimo, o(s) Autor(es) do objeto de aprendizagem deve ser descrito"@pt-BR .
+
+:MetaMetadataContributeRole a skos:ConceptScheme;
+  skos:prefLabel "MetaMetadata Contribute Role"@en, "Papel do Contribuidor do Metadado"@pt-BR;
+  skos:note "Papel do contribuidor. No mínimo, o(s) Criador(es) do metadado do objeto de aprendizagem deve ser descrito"@pt-BR .
+
+:TechnicalRequirementOrCompositeName a skos:ConceptScheme;
+  skos:prefLabel "Technical Requirement OrComposite Name"@en, "Nome do requisito ou requisito composto"@pt-BR;
+  skos:note "Nome da tecnologia necessária para usar esse objeto de aprendizagem. O valor para estes dados podem derivar do 4.1:Formato"@pt-BR .
+
+:TechnicalRequirementOrCompositeType a skos:ConceptScheme;
+  skos:prefLabel "Technical Requirement OrComposite Type"@en, "Tipo do requisito ou requisito composto"@pt-BR;
+  skos:note "Tipo de tecnologia necessária para usar este objeto de aprendizagem, por exemplo, hardware, software, rede, etc."@pt-BR .
+
+:EducationalInteractivityType a skos:ConceptScheme;
+  skos:prefLabel "Educational Interactivity Type"@en, "Tipo do interatividade"@pt-BR;
+  skos:note "Modo predominante de aprendizado suportado por este objeto de aprendizagem. Ex: aprendizagem “ativa” é suportado por conteúdo que induz diretamente a ação produtiva do aluno."@pt-BR .
+
+:EducationalLearningResourceType a skos:ConceptScheme;
+  skos:prefLabel "Educational Learning Resource Type"@en, "Tipo de recurso de aprendizagem"@pt-BR;
+  skos:note "Tipo específico de objeto de aprendizagem. O tipo mais dominante deve ser o primeiro. NOTA 28 — Os termos do vocabulário são definido como no OED:1989 e como usado por comunidades educativas de prática."@pt-BR .
+
+:EducationalInteractivityLevel a skos:ConceptScheme;
+  skos:prefLabel "Educational Interactivity Level"@en, "Grau de interatividade"@pt-BR;
+  skos:note "O grau de interatividade que caracteriza esse OA. Interatividade neste contexto refere-se ao grau em que o aluno pode influenciar o aspecto ou comportamento do OA. NOTA 29 — esta escala é significativo dentro do contexto de uma comunidade de prática."@pt-BR .
+
+:EducationalSemanticDensity a skos:ConceptScheme;
+  skos:prefLabel "Educational Semantic Density"@en, "Grau de densidade semântica"@pt-BR;
+  skos:note " A densidade semântica de um OA pode ser estimado em termos de seu tamanho, extensão ou – no caso de recursos cronometrados, como áudio ou vídeo– duração. É independente de sua dificuldade. É melhor ilustrado com exemplos de expositivo material, embora possa ser usado com recursos ativos também. NOTA 31— esta escala é significativo dentro do contexto de uma comunidade de prática]"@pt-BR .
+
+:EducationalIntendedEndUserRole a skos:ConceptScheme;
+  skos:prefLabel "Educational Intended End User Role"@en, "Papel do usuário final pretendido"@pt-BR;
+  skos:note " Usuário(s) principal(is) para o(s) qual(is) este OA foi projetado, o mais dominante primeiro. NOTA 32— Um aluno trabalha com um OA para aprender algo. Um autor cria ou publica um objeto de aprendizagem. Um gerente gerencia a entrega desse OA, por exemplo, uma universidade ou faculdade. Ondocumento para um gerente é tipicamente um currículo. NOTA 33— Para descrever a função de usuário final pretendida por meio do habilidades que o usuário pretende dominar, ou as tarefas a que se destina ser capaz de realizar, a categoria 9: A classificação pode ser usada."@pt-BR .
+
+:EducationalContext a skos:ConceptScheme;
+  skos:prefLabel "Educational Context"@en, "Contexto educacional"@pt-BR;
+  skos:note " O principal ambiente dentro do qual o aprendizado e o uso desse OA se destina. NOTA 34 — Boas práticas sugeridas é usar um dos valores do valor espaço e usar uma instância adicional de este elemento de dados para maior refinamento"@pt-BR .
+
+:EducationalDifficulty a skos:ConceptScheme;
+  skos:prefLabel "Educational Difficulty"@en, "Nível de dificuldade"@pt-BR;
+  skos:note " Quão difícil é trabalhar com ou através deste OA para o típico público-alvo pretendido. NOTA 37— O “ alvo típico público” pode ser caracterizado por dados elementos 5.6:Educational. Contexto e 5.7:Educational.TypicalAgeRange."@pt-BR .
+
+:RightsCost a skos:ConceptScheme;
+  skos:prefLabel "Rights Cost"@en, "Custo"@pt-BR;
+  skos:note " Se o uso desse objeto de aprendizagem requer pagamento."@pt-BR .
+
+:RightsCopyrightandOtherRestrictions a skos:ConceptScheme;
+  skos:prefLabel "Rights Copyright and Other Restrictions"@en, "Direitos Autorais e Outras Restrições"@pt-BR;
+  skos:note " Se direitos autorais ou outras restrições aplicam-se ao uso deste objeto de aprendizagem."@pt-BR .
+
+:RelationKind a skos:ConceptScheme;
+  skos:prefLabel "Relation Kind"@en, "Natureza da relação"@pt-BR;
+  skos:note " Natureza da relação entre esse OA e o objeto de aprendizagem alvo, identificado por 7.2:Relation.Resource. Baseado no Dublin Core."@pt-BR .
+
+:ClassificationPurpose a skos:ConceptScheme;
+  skos:prefLabel "Classification Purpose"@en, "Propósito de classificação"@pt-BR;
+  skos:note " O propósito de classificar este objeto de aprendizagem."@pt-BR .
+
+:Atomic a skos:Concept;
+  skos:inScheme :GeneralStruture;
+  skos:topConceptOf :GeneralStruture;
+  skos:prefLabel "Atomic"@en, "Atômico"@pt-BR .
+
+:Collection a skos:Concept;
+  skos:inScheme :GeneralStruture;
+  skos:topConceptOf :GeneralStruture;
+  skos:prefLabel "Collection"@en, "Coleção"@pt-BR .
+
+:Networked a skos:Concept;
+  skos:inScheme :GeneralStruture;
+  skos:topConceptOf :GeneralStruture;
+  skos:prefLabel "Networked"@en, "Em Rede"@pt-BR .
+
+:Hierarchical a skos:Concept;
+  skos:inScheme :GeneralStruture;
+  skos:topConceptOf :GeneralStruture;
+  skos:prefLabel "Hierarchical"@en, "Hierárquico"@pt-BR .
+
+:Linear a skos:Concept;
+  skos:inScheme :GeneralStruture;
+  skos:topConceptOf :GeneralStruture;
+  skos:prefLabel "Linear"@en, "Linear"@pt-BR .
+
+:Level1 a skos:Concept;
+  skos:inScheme :GeneralAggregationLevel;
+  skos:topConceptOf :GeneralAggregationLevel;
+  skos:prefLabel "1" .
+
+:Level2 a skos:Concept;
+  skos:inScheme :GeneralAggregationLevel;
+  skos:topConceptOf :GeneralAggregationLevel;
+  skos:prefLabel "2" .
+
+:Level3 a skos:Concept;
+  skos:inScheme :GeneralAggregationLevel;
+  skos:topConceptOf :GeneralAggregationLevel;
+  skos:prefLabel "3" .
+
+:Level4 a skos:Concept;
+  skos:inScheme :GeneralAggregationLevel;
+  skos:topConceptOf :GeneralAggregationLevel;
+  skos:prefLabel "4" .
+
+:Draft a skos:Concept;
+  skos:inScheme :LifeCycleStatus;
+  skos:topConceptOf :LifeCycleStatus;
+  skos:prefLabel "Draft"@en, "Rascunho"@pt-BR .
+
+:Final a skos:Concept;
+  skos:inScheme :LifeCycleStatus;
+  skos:topConceptOf :LifeCycleStatus;
+  skos:prefLabel "Final"@en, "Final"@pt-BR .
+
+:Revised a skos:Concept;
+  skos:inScheme :LifeCycleStatus;
+  skos:topConceptOf :LifeCycleStatus;
+  skos:prefLabel "Revised"@en, "Revisado "@pt-BR .
+
+:Unavailable a skos:Concept;
+  skos:inScheme :LifeCycleStatus;
+  skos:topConceptOf :LifeCycleStatus;
+  skos:prefLabel "Unavailable"@en, "Indisponível"@pt-BR .
+
+:Author a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole, :EducationalIntendedEndUserRole;
+  skos:topConceptOf :LifeCycleContributeRole, :EducationalIntendedEndUserRole;
+  skos:prefLabel "Author"@en, "Autor"@pt-BR .
+
+:Publisher a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Publisher"@en, "Publicador"@pt-BR .
+
+:Unknown a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Unknown"@en, "Desconhecido"@pt-BR .
+
+:Initiator a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Initiator"@en, "Iniciador"@pt-BR .
+
+:Terminator a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Terminator"@en, "terminador"@pt-BR .
+
+:Validator a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole, :MetaMetadataContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole, :MetaMetadataContributeRole;
+  skos:prefLabel "validador"@en, "validador"@pt-BR, "Validator"@en, "Validador"@pt-BR .
+
+:Editor a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Editor"@en, "Editor"@pt-BR .
+
+:Graphical a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Graphical"@en, "Gráfico"@pt-BR .
+
+:Designer a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Designer"@en, "Designer"@pt-BR .
+
+:Technical a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Technical"@en, "Técnico"@pt-BR .
+
+:Implementer a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Implementer"@en, "Implementador"@pt-BR .
+
+:Content a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Content"@en, "Conteudista"@pt-BR .
+
+:Provider a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Provider"@en, "Fornecedor"@pt-BR .
+
+:TechnicalValidator a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Technical validator"@en, "Validador técnico"@pt-BR .
+
+:EducationalValidator a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Educational validator "@en, "Validador educacional"@pt-BR .
+
+:ScriptWriter a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Script writer"@en, "Roteirista"@pt-BR .
+
+:InstructionalDesigner a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Instructional designer"@en, "Designer Instrucional"@pt-BR .
+
+:SubjectMatterExpert a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Subject matter expert"@en, "Especialista no assunto"@pt-BR .
+
+:Creator a skos:Concept;
+  skos:inScheme :MetaMetadataContributeRole;
+  skos:topConceptOf :MetaMetadataContributeRole;
+  skos:prefLabel "Creator"@en, "Criador"@pt-BR .
+
+:OperatingSystem a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeType;
+  skos:topConceptOf :TechnicalRequirementOrCompositeType;
+  skos:prefLabel "Operating system"@en, "Sistema operacional"@pt-BR .
+
+:Browser a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeType;
+  skos:topConceptOf :TechnicalRequirementOrCompositeType;
+  skos:prefLabel "Browser"@en, "Navegador"@pt-BR .
+
+:PcDos a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Pc-Dos"@en, "Pc-Dos"@pt-BR .
+
+:MsWindows a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Ms-windows"@en, "Ms-windows"@pt-BR .
+
+:MacOS a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "MacOS"@en, "MacOS"@pt-BR .
+
+:Unix a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Unix"@en, "Unix"@pt-BR .
+
+:OS a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "OS"@en, "OS"@pt-BR .
+
+:Android a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Android"@en, "Android"@pt-BR .
+
+:Any a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Any"@en, "Qualquer um"@pt-BR .
+
+:NetscapeCommunicator a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Netscape communicator"@en, "Netscape communicator"@pt-BR .
+
+:MSInternetExplorer a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "MS-internet explorer"@en, "MS-internet explorer"@pt-BR .
+
+:Opera a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Opera"@en, "Opera"@pt-BR .
+
+:Amaya a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Amaya"@en, "Amaya"@pt-BR .
+
+:Chrome a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Chrome"@en, "Chrome"@pt-BR .
+
+:MozillaFirefox a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Mozilla Firefox"@en, "Mozilla Firefox"@pt-BR .
+
+:MicrosoftEdge a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Microsoft Edge"@en, "Microsoft Edge"@pt-BR .
+
+:Safari a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Safari"@en, "Safari"@pt-BR .
+
+:Active a skos:Concept;
+  skos:inScheme :EducationalInteractivityType;
+  skos:topConceptOf :EducationalInteractivityType;
+  skos:prefLabel "Active"@en, "Ativo"@pt-BR .
+
+:Expositive a skos:Concept;
+  skos:inScheme :EducationalInteractivityType;
+  skos:topConceptOf :EducationalInteractivityType;
+  skos:prefLabel "Expositive"@en, "Expositivo"@pt-BR .
+
+:Mixed a skos:Concept;
+  skos:inScheme :EducationalInteractivityType;
+  skos:topConceptOf :EducationalInteractivityType;
+  skos:prefLabel "Mixed"@en, "Misturado"@pt-BR .
+
+:Exercise a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Exercise"@en, "Exercício"@pt-BR .
+
+:Simulation a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Simulation"@en, "Simulado"@pt-BR .
+
+:Questionnaire a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Questionnaire"@en, "Questionário"@pt-BR .
+
+:Diagram a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Diagram"@en, "Diagrama"@pt-BR .
+
+:Game a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Game"@en, "Jogo"@pt-BR .
+
+:Figure a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Figure"@en, "Figura"@pt-BR .
+
+:Graph a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Gráfico"@pt-BR, "Graph"@en .
+
+:Index a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Index"@en, "Índice"@pt-BR .
+
+:Slide a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Slide"@en, "Slide"@pt-BR .
+
+:Table a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Table"@en, "Tabela"@pt-BR .
+
+:NarrativeText a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Narrative text"@en, "Texto narrativo"@pt-BR .
+
+:ExamText a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Exam"@en, "Prova"@pt-BR .
+
+:ExperimentText a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Experiment"@en, "Experimento"@pt-BR .
+
+:ProblemStatementText a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Problem Statement"@en, "Declaração do problema"@pt-BR .
+
+:SelfAssessment a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Self Assessment"@en, "Auto-avaliação"@pt-BR .
+
+:Lecture a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Lecture"@en, "Palestra"@pt-BR .
+
+:Interview a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Interview"@en, "Entrevista"@pt-BR .
+
+:VeryLow a skos:Concept;
+  skos:inScheme :EducationalInteractivityLevel, :EducationalSemanticDensity;
+  skos:topConceptOf :EducationalInteractivityLevel, :EducationalSemanticDensity;
+  skos:prefLabel "Very low"@en, "Muito baixo"@pt-BR .
+
+:Low a skos:Concept;
+  skos:inScheme :EducationalInteractivityLevel, :EducationalSemanticDensity;
+  skos:topConceptOf :EducationalInteractivityLevel, :EducationalSemanticDensity;
+  skos:prefLabel "Low"@en, "Baixo"@pt-BR .
+
+:Medium a skos:Concept;
+  skos:inScheme :EducationalInteractivityLevel, :EducationalSemanticDensity, :EducationalDifficulty;
+  skos:topConceptOf :EducationalInteractivityLevel, :EducationalSemanticDensity, :EducationalDifficulty;
+  skos:prefLabel "Medium"@en, "Médio"@pt-BR .
+
+:High a skos:Concept;
+  skos:inScheme :EducationalInteractivityLevel, :EducationalSemanticDensity;
+  skos:topConceptOf :EducationalInteractivityLevel, :EducationalSemanticDensity;
+  skos:prefLabel "High"@en, "Alto"@pt-BR .
+
+:VeryHigh a skos:Concept;
+  skos:inScheme :EducationalInteractivityLevel, :EducationalSemanticDensity;
+  skos:topConceptOf :EducationalInteractivityLevel, :EducationalSemanticDensity;
+  skos:prefLabel "Very high"@en, "Muito Alto"@pt-BR .
+
+:Teacher a skos:Concept;
+  skos:inScheme :EducationalIntendedEndUserRole;
+  skos:topConceptOf :EducationalIntendedEndUserRole;
+  skos:prefLabel "Teacher"@en, "Professor(a)"@pt-BR .
+
+:Learner a skos:Concept;
+  skos:inScheme :EducationalIntendedEndUserRole;
+  skos:topConceptOf :EducationalIntendedEndUserRole;
+  skos:prefLabel "Learner"@en, "Aluno"@pt-BR .
+
+:Manager a skos:Concept;
+  skos:inScheme :EducationalIntendedEndUserRole;
+  skos:topConceptOf :EducationalIntendedEndUserRole;
+  skos:prefLabel "Manager"@en, "Gerente"@pt-BR .
+
+:School a skos:Concept;
+  skos:inScheme :EducationalContext;
+  skos:topConceptOf :EducationalContext;
+  skos:prefLabel "School"@en, "escola"@pt-BR .
+
+:HigherEducation a skos:Concept;
+  skos:inScheme :EducationalContext;
+  skos:topConceptOf :EducationalContext;
+  skos:prefLabel "Higher Education"@en, "Ensino superior"@pt-BR .
+
+:Training a skos:Concept;
+  skos:inScheme :EducationalContext;
+  skos:topConceptOf :EducationalContext;
+  skos:prefLabel "Training"@en, "Treinamento"@pt-BR .
+
+:Other a skos:Concept;
+  skos:inScheme :EducationalContext;
+  skos:topConceptOf :EducationalContext;
+  skos:prefLabel "Other"@en, "Outros"@pt-BR .
+
+:VeryEasy a skos:Concept;
+  skos:inScheme :EducationalDifficulty;
+  skos:topConceptOf :EducationalDifficulty;
+  skos:prefLabel "Very easy"@en, "Muito Fácil"@pt-BR .
+
+:Easy a skos:Concept;
+  skos:inScheme :EducationalDifficulty;
+  skos:topConceptOf :EducationalDifficulty;
+  skos:prefLabel "Easy"@en, "Fácil"@pt-BR .
+
+:Difficult a skos:Concept;
+  skos:inScheme :EducationalDifficulty;
+  skos:topConceptOf :EducationalDifficulty;
+  skos:prefLabel "Difficult"@en, "Difícil"@pt-BR .
+
+:VeryDifficult a skos:Concept;
+  skos:inScheme :EducationalDifficulty;
+  skos:topConceptOf :EducationalDifficulty;
+  skos:prefLabel "Very difficult"@en, "Muito Difícil"@pt-BR .
+
+:Yes a skos:Concept;
+  skos:inScheme :RightsCost, :RightsCopyrightandOtherRestrictions;
+  skos:topConceptOf :RightsCost, :RightsCopyrightandOtherRestrictions;
+  skos:prefLabel "Yes"@en, "Sim"@pt-BR .
+
+:No a skos:Concept;
+  skos:inScheme :RightsCost, :RightsCopyrightandOtherRestrictions;
+  skos:topConceptOf :RightsCost, :RightsCopyrightandOtherRestrictions;
+  skos:prefLabel "No"@en, "Não"@pt-BR .
+
+:Ispartof a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Is part of"@en, "É parte de"@pt-BR .
+
+:Haspart a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Has part"@en, "Tem parte"@pt-BR .
+
+:Isversionof a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Is version of"@en, "É a versão de"@pt-BR .
+
+:Hasversion a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Has version"@en, "Tem versão"@pt-BR .
+
+:Isformatof a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Is format of"@en, "É formato de"@pt-BR .
+
+:Hasformat a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Has format"@en, "Tem formato"@pt-BR .
+
+:References a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "References"@en, "Referências"@pt-BR .
+
+:Isreferencedby a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Is referenced by"@en, "É referenciado por"@pt-BR .
+
+:Isbasedon a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Is base don"@en, "é baseado em"@pt-BR .
+
+:Isbasisfor a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Is basis for"@en, "É base para"@pt-BR .
+
+:Requires a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Requires"@en, "Requer"@pt-BR .
+
+:Isrequiredby a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Is required by"@en, "É exigido por"@pt-BR .
+
+:Discipline a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Discipline"@en, "Disciplina"@pt-BR .
+
+:Idea a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Idea"@en, "Ideia"@pt-BR .
+
+:Prerequisite a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Prerequisite"@en, "Pré-requisito"@pt-BR .
+
+:EducationalObjective a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Educational objective"@en, "Objetivo educacional"@pt-BR .
+
+:Accessibility a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Accessibility"@en, "Acessibilidade"@pt-BR .
+
+:Restrictions a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Restrictions"@en, "Restrições"@pt-BR .
+
+:EducationalLevel a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Educational level"@en, "Nível educacional"@pt-BR .
+
+:SkillLevel a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Skill level"@en, "Nível de habilidade"@pt-BR .
+
+:SecurityLevel a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Security level"@en, "Nível de segurança"@pt-BR .
+
+:Competency a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Competency"@en, "Competência"@pt-BR .
+
+:generalStruture a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem estrutura geral"@pt-BR, "has general structure"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:generalAggregationLevel a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem nível de granularidade"@pt-BR, "has level of granularity"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:lifeCycleStatus a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem status do ciclo de vida"@pt-BR, "has life cycle status"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:lifeCycleContributeRole a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem função de contribuição do Ciclo de Vida"@pt-BR, "has a life cycle contribution role"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:metaMetadataContributeRole a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem papel do Contribuidor do Metadado"@pt-BR, "has metadata contributor role"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:technicalRequirementOrCompositeType a owl:AsymmetricProperty, owl:ObjectProperty,
+    owl:FunctionalProperty, owl:IrreflexiveProperty;
+  rdfs:label "tem tipo do requisito ou requisito composto"@pt-BR, "has requirement type or composite requirement"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:technicalRequirementOrCompositeName a owl:AsymmetricProperty, owl:ObjectProperty,
+    owl:FunctionalProperty, owl:IrreflexiveProperty;
+  rdfs:label "tem nome do requisito ou requisito composto"@pt-BR, "has requirement name or composite requirement"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:educationalInteractivityType a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem tipo do interatividade"@pt-BR, "has type of interactivity"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:educationalLearningResourceType a owl:AsymmetricProperty, owl:ObjectProperty, owl:IrreflexiveProperty;
+  rdfs:label "tem tipo de recurso de aprendizagem"@pt-BR, "has type of learning resource"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:type .
+
+:educationalInteractivityLevel a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem grau de interatividade"@pt-BR, "has interactivity level"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:educationalSemanticDensity a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem densidade semântica"@pt-BR, "has semantic density"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:educationalIntendedEndUserRole a owl:AsymmetricProperty, owl:ObjectProperty, owl:IrreflexiveProperty;
+  rdfs:label "tem papel do usuário final pretendido"@pt-BR, "has intended end user role"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:educationalContext a owl:AsymmetricProperty, owl:ObjectProperty, owl:IrreflexiveProperty;
+  rdfs:label "tem contexto educacional"@pt-BR, "has educational context"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:educationalDifficulty a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem nível de dificuldade"@pt-BR, "has difficulty level"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:rightsCost a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem custo"@pt-BR, "has cost"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:rightsCopyrightandOtherRestrictions a owl:AsymmetricProperty, owl:ObjectProperty,
+    owl:FunctionalProperty, owl:IrreflexiveProperty;
+  rdfs:label "tem direitos autorais e outras restrições"@pt-BR, "has copyright and other restrictions"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:relationKind a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem tipo de relação"@pt-BR, "has relation kind"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:classificationPurpose a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem propósito de classificação"@pt-BR, "has classification purpose"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:generalIdentifierCatalog a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "identificador do catálogo"@pt-BR, "catalog identifier "@en;
+  rdfs:comment "Nome ou designador do esquema de identificação ou catalogação"@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject .
+
+:generalIdentifierEntry a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "entrada do Identificador"@pt-BR, "identifier entry "@en;
+  rdfs:comment "O valor do identificador dentro do esquema de identificação ou catalogação que designa ou identifica este OA. Uma string específica de namespace"@pt-BR;
+  rdfs:range xsd:anyURI;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:identifier .
+
+:generalTitle a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "título"@pt-BR, "title"@en;
+  rdfs:comment "Nome dado a este objeto de aprendizagem"@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:title .
+
+:generalLanguage a owl:DatatypeProperty;
+  rdfs:label "idioma"@pt-BR, "language"@en;
+  rdfs:comment "A linguagem humana primária ou idiomas usados dentro deste OA de comunicar ao destinatário do utilizador. NOTA 1— Uma indexação ou catalogação ferramenta pode fornecer um padrão útil. NOTA 2— Se o objeto de aprendizagem não conteúdo lingual (como no caso de uma imagem da Mona Lisa, por exemplo), então o valor apropriado para este elemento de dados seria nenhuma. NOTA 3— Este elemento de dados diz respeito a linguagem do objeto de aprendizagem. Elemento de dados 3.4:Meta-Metadados. A linguagem diz respeito à linguagem da instância de metadados"@pt-BR;
+  rdfs:range xsd:language;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:language .
+
+:generalDescription a owl:DatatypeProperty;
+  rdfs:label "descrição"@pt-BR, "description"@en;
+  rdfs:comment "Uma descrição textual do conteúdo desse OA. NOTA 6— Esta descrição não precisa ser em linguagem e termos apropriados para os usuários do objeto de aprendizagem sendo descrito. A descrição deve ser em linguagem e termos apropriados para aqueles que decidem se o OA que está sendo descrito é adequado e relevante para os usuários."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:description .
+
+:generalKeyword a owl:DatatypeProperty;
+  rdfs:label "palavra-chave"@pt-BR, "keyword"@en;
+  rdfs:comment "Uma palavra-chave ou frase descrevendo o tópico desse OA. Este elemento de dados não deve ser usado para características que podem ser descritas por outros elementos de dados."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:subject .
+
+:generalCoverage a owl:DatatypeProperty;
+  rdfs:label "cobertura"@pt-BR, "coverage"@en;
+  rdfs:comment "O tempo, cultura, geografia ou região para qual este OA se aplica. A extensão ou escopo do conteúdo do OA. A cobertura normalmente incluir localização espacial (um nome de lugar ou coordenadas geográficas), temporal período (uma etiqueta de período, data ou intervalo de data) ou jurisdição (como um nome entidade administrativa). Recomendado a melhor prática é selecionar um valor de um vocabulário controlado (por exemplo, o Tesauro de Nomes Geográficos[TGN]) e que, quando apropriado, lugares nomeados ou períodos de tempo sejam usados em preferência a identificadores numéricos como conjuntos de coordenadas ou intervalos de datas.NOTA 7— Esta é a definição deo conjunto de elementos de metadados do Dublin Core https://www.dublincore.org/specifications/dublin-core/dcmi-terms/elements11/coverage/"@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:coverage .
+
+:lifeCycleVersion a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "versão"@pt-BR, "version"@en;
+  rdfs:comment "A edição deste objeto de aprendizagem."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
+:lifeCycleContributeEntity a owl:DatatypeProperty;
+  rdfs:label "entidade"@pt-BR, "entity"@en;
+  rdfs:comment "A identificação e as informações sobre entidades (ou seja, pessoas, organizações) contribuindo para esse OA. As entidades devem ser ordenados como mais relevantes primeiro."@pt-BR;
+  rdfs:range xsd:date;
+  rdfs:domain :LearningObject .
+
+:lifeCycleContributeDate a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "data"@pt-BR, "date"@en;
+  rdfs:comment "A data da contribuição."@pt-BR;
+  rdfs:domain :LearningObject;
+  rdfs:datatype xsd:date .
+
+:metaMetadataIdentifierCatalog a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "catálogo"@pt-BR, "catalog"@en;
+  rdfs:comment "O nome ou designador do esquema de identificação ou catalogação para esta entrada. Um esquema de namespace."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject .
+
+:metaMetadataIdentifierEntry a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "entrada"@pt-BR, "entry"@en;
+  rdfs:comment "O valor do identificador dentro do esquema de identificação ou catalogação que designa ou identifica esses metadados registro. Uma string específica de namespace."@pt-BR;
+  rdfs:range xsd:anyURI;
+  rdfs:domain :LearningObject .
+
+:metaMetadataContributeEntity a owl:DatatypeProperty;
+  rdfs:label "entidade"@pt-BR, "entity"@en;
+  rdfs:comment "A identificação e as informações sobre entidades (ou seja, pessoas,organizações) contribuindo para isso instância de metadados. As entidades devem ser ordenados como mais relevantes primeiro."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject .
+
+:metaMetadataContributeDate a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "data"@pt-BR, "date"@en;
+  rdfs:comment "A data da contribuição."@pt-BR;
+  rdfs:range xsd:date;
+  rdfs:domain :LearningObject .
+
+:metaMetadataMetadataSchema a owl:DatatypeProperty;
+  rdfs:label "esquema"@pt-BR, "schema"@en;
+  rdfs:comment "O nome e a versão da especificação autorizada usada para criar esta instância de metadados. Se vários valores forem fornecidos, então a instância de metadados deve estar em conformidade a vários esquemas de metadados."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject .
+
+:metaMetadataLanguage a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "idioma"@pt-BR, "language"@en;
+  rdfs:comment "Idioma desta instância de metadados. Esse é o idioma padrão para todos os LangString nesta instância de metadados. Se um valor para este elemento de dados não está presente em uma instância de metadados, então não há idioma padrão para valores LangString. NOTA 19— Este elemento de dados diz respeito à linguagem do instância de metadados. Elemento de dados1.3: Geral. A linguagem diz respeito ao linguagem do objeto de aprendizagem."@pt-BR;
+  rdfs:range xsd:language;
+  rdfs:domain :LearningObject .
+
+:technicalFormat a owl:DatatypeProperty;
+  rdfs:label "formato"@pt-BR, "format"@en;
+  rdfs:comment "Tipo(s) de dados técnicos de (todos os componentes deste objeto de aprendizagem. Este elemento de dados deve ser usado para identificar o software necessário para acessar o objeto de aprendizagem."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:format .
+
+:technicalSize a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "tamanho"@pt-BR, "size"@en;
+  rdfs:comment "O tamanho do aprendizado digital objeto em bytes (octetos). o tamanho é representado como um valor decimal (raiz 10). Consequentemente, apenas os dígitos “0” até “9” devem ser usados. A unidade é bytes, não Mbytes, GB, etc. Este elemento de dados deve referir-se ao tamanho real deste objeto de aprendizagem. Se o objeto de aprendizagem é compactado, então este elemento de dados deve se referir para o tamanho não compactado.."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject .
+
+:technicalLocation a owl:DatatypeProperty;
+  rdfs:label "localização"@pt-BR, "location"@en;
+  rdfs:comment "Uma string que é usada para acessar este objeto de aprendizagem. Ele poderia representar um localização (por exemplo, Recurso Universal Localizador), ou um método que resolva um local (por exemplo, Universal Resource identificador). O primeiro elemento desta lista será o localização preferencial. NOTA 21— Aqui é onde o aprendizado objeto descrito por esses metadados instância está localizada fisicamente.."@pt-BR;
+  rdfs:range xsd:anyURI;
+  rdfs:domain :LearningObject .
+
+:technicalRequirementOrCompositeMinimumVersion a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "versão mínima"@pt-BR, "minimum version"@en;
+  rdfs:comment "Versão mais baixa possível da necessária tecnologia para usar este objeto de aprendizagem."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject .
+
+:technicalRequirementOrCompositeMaximumVersion a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "versão máxima"@pt-BR, "maximum version"@en;
+  rdfs:comment "Versão mais alta possível da necessária tecnologia para usar este objeto de aprendizagem."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject .
+
+:technicalInstallationRemarks a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "observações de instalação"@pt-BR, "installation remarks"@en;
+  rdfs:comment "Descrição de como instalar esse objeto de aprendizagem."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
+:technicalOtherPlatformRequirements a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "outros requisitos da plataforma"@pt-BR, "other platform requirements"@en;
+  rdfs:comment "Informações sobre outros softwares e requisitos de hardware. NOTA 24— Este elemento destina-se para descrições de requisitos que não pode ser expresso por elemento de dados 4.4:Requisito.Técnico."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
+:technicalDuration a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "duração"@pt-BR, "duration"@en;
+  rdfs:comment "Tempo que um objeto de aprendizado contínuo leva quando jogado na velocidade pretendida. NOTA 25— Este elemento de dados é especialmente útil para sons,filmes ou animações."@pt-BR;
+  rdfs:range xsd:duration;
+  rdfs:domain :LearningObject .
+
+:educationalTypicalAgeRange a owl:DatatypeProperty;
+  rdfs:label "faixa etária típica"@pt-BR, "typical age range"@en;
+  rdfs:comment "Este elemento de dados deve referir-se a idade de desenvolvimento, se isso seria diferente da idade cronológica. NOTA 35— A idade do aluno é importante para encontrar objetos de aprendizagem, especialmente para alunos em idade escolar e seus professores. Quando aplicável, a string deve ser formatado como idade mínima-máxima idade ou idade mínima-. (note que isso é um compromisso entre adicionar três elementos componentes (idade mínima, idade máxima e descrição) e tendo apenas um campo de texto livre.) NOTA 36— Esquemas alternativos para o que este elemento de dados tenta cobrir (como várias idades de leitura ou esquemas de nível, QI ou desenvolvimento medidas de idade) devem ser representadas através da categoria 9:Classificação."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
+:educationalTypicalLearningTime a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "tempo típico de aprendizagem"@pt-BR, "typical learning time"@en;
+  rdfs:comment "Tempo aproximado ou típico que leva para trabalhar com ou através deste objeto de aprendizagem para o público-alvo pretendido típico. NOTA 38— O “ alvo típico público” pode ser caracterizado por dados elementos 5.6:Educational.Contexto e 5.7:Educational.TypicalAgeRange.“PT1H30M”, “PT1M45S"@pt-BR;
+  rdfs:range xsd:duration;
+  rdfs:domain :LearningObject .
+
+:educationalDescription a owl:DatatypeProperty;
+  rdfs:label "Descrição"@pt-BR, "Description"@en;
+  rdfs:comment "Comente como esse OA será usado."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
+:educationalLanguage a owl:DatatypeProperty;
+  rdfs:label "idioma"@pt-BR, "Language"@en;
+  rdfs:comment "A linguagem humana usada pelos típicos usuário pretendido deste objeto de aprendizagem. Exemplo:en,en-GB,de,fr-CA, NOTA 39— Como exemplo, para um objeto de aprendizagem em francês, destinado a falantes de inglês alunos, o valor de 1,3:Geral. O idioma será o francês e o valor de 5,11: Educacional. O idioma será o inglês."@pt-BR;
+  rdfs:range xsd:language;
+  rdfs:domain :LearningObject .
+
+:rightsDescription a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "Descrição"@pt-BR, "Description"@en;
+  rdfs:comment "Comentários sobre as condições de uso deste objeto de aprendizagem."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:rights .
+
+:relationResourceIdentifierCatalog a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "Catálogo"@pt-BR, "Catalog"@en;
+  rdfs:comment "O nome ou designador do esquema de identificação ou catalogação para esta entrada. Um esquema de namespace."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject .
+
+:relationResourceIdentifierEntry a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "Entrada"@pt-BR, "Entry"@en;
+  rdfs:comment "O valor do identificador dentro do esquema de identificação ou catalogação que designa ou identifica o aprendizado alvo objeto. Uma string específica de namespace."@pt-BR;
+  rdfs:range xsd:anyURI;
+  rdfs:domain :LearningObject .
+
+:relationResourceDescription a owl:DatatypeProperty;
+  rdfs:label "Descrição"@pt-BR, "Description"@en;
+  rdfs:comment "Descrição do objeto de aprendizagem de destino."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:relation .
+
+:annotationEntity a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "entidade"@pt-BR, "entity"@en;
+  rdfs:comment "Entidade (ou seja, pessoas, organização)que criou esta anotação."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject .
+
+:annotationDate a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "data"@pt-BR, "date"@en;
+  rdfs:comment "Data em que esta anotação foi criada."@pt-BR;
+  rdfs:range xsd:date;
+  rdfs:domain :LearningObject .
+
+:annotationDescription a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "descrição"@pt-BR, "description"@en;
+  rdfs:comment "O conteúdo desta anotação."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
+:classificationTaxonPathSource a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "fonte"@pt-BR, "source"@en;
+  rdfs:comment "O nome do sistema de classificação.NOTA 41— Uma indexação,ferramenta de catalogação ou consulta pode fornecer as entradas de nível superior de um classificação bem estabelecida, como a Biblioteca do Congresso Classificação (LOC), Universal Classificação Decimal (UDC), Dewey Classificação Decimal (DDC), etc."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
+:classificationTaxonPathTaxonId a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "identificador"@pt-BR, "id"@en;
+  rdfs:comment "O identificador do táxon, como um número ou combinação de letras fornecida pela fonte da taxonomia."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject .
+
+:classificationTaxonPathTaxonEntry a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "entrada"@pt-BR, "entry "@en;
+  rdfs:comment "O identificador do táxon, como um número ou combinação de letras fornecida pela fonte da taxonomia."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
+:classificationDescription a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "descrição"@pt-BR, "description "@en;
+  rdfs:comment "Descrição do objeto de aprendizagem em relação ao referido 9.1:Classificação. Objetivo desta classificação específica, como disciplina, ideia, nível de habilidade, objetivo educacional, etc."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
+:classificationKeyword a owl:DatatypeProperty;
+  rdfs:label "palavra-chave"@pt-BR, "keyword"@en;
+  rdfs:comment "Palavras-chave e frases descritivas do objeto de aprendizagem em relação ao declarado 9.1: Classificação. Objetivo deste específico classificação, como acessibilidade, nível de segurança, etc., mais relevante primeiro."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
+data:OA001 a :LearningObject;
+  dc:title "Aprendizagem em rede"@pt-BR;
+  dc:description "Apresenta uma arquitetura de aprendizagem em Rede, contemplando três dimensões, que interagem, se complementam e tem como objetivo o conhecimento aplicado, a geração de novas tecnologias e inovação para o desenvolvimento profissional e institucional."@pt-BR;
+  :generalStruture :Atomic;
+  :generalAggregationLevel :Level1;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Author;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :Browser;
+  :technicalRequirementOrCompositeName :Any;
+  :educationalInteractivityType :Expositive;
+  :educationalLearningResourceType :Figure;
+  dc:type :Figure, "Figure";
+  :educationalInteractivityLevel :Low;
+  :educationalSemanticDensity :Medium;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Training;
+  :educationalDifficulty :Easy;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :Competency;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/32122"^^xsd:anyURI;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/32122"^^xsd:anyURI;
+  :generalTitle "Aprendizagem em rede"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  dc:language "pt-BR"^^xsd:language, "pt-BR"^^dc:language;
+  :generalDescription "Apresenta uma arquitetura de aprendizagem em Rede, contemplando três dimensões, que interagem, se complementam e tem como objetivo o conhecimento aplicado, a geração de novas tecnologias e inovação para o desenvolvimento profissional e institucional."@pt-BR;
+  :generalKeyword "Aprendizagem em Rede"@pt-BR, "Gestão do Conhecimento"@pt-BR, "Rede de Conteúdos"@pt-BR,
+    "Rede de Ambientes Aprendizes"@pt-BR, "Rede Social da Gestão"@pt-BR, "aprendizagem em rede"@pt-BR,
+    "gestão do conhecimento"@pt-BR, "rede de conteúdos"@pt-BR, "rede de ambientes aprendizes"@pt-BR,
+    "rede social da gestão"@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  dc:coverage "Brasil"@pt-BR;
+  :lifeCycleVersion "Nenhuma"@pt-BR, "nenhum"@pt-BR;
+  :lifeCycleContributeEntity "BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\ NTEL:+55-021-3865-3131\\nTITLE: Icict/Fiocruz\\, Assistant\\n  EMAIL\\;TYPE=INTERN\\ nET:arca@fiocruz.br\\nEND:VCARD\\n",
+    """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2019-03-15"^^xsd:date, "2019-03-15T03:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity "BEGIN:VCARD\\nFN:IEEE Computer Society\\ NTEL:+1 732 465 5871\\nTITLE: IEEE Foundation\\, Assistant\\n  EMAIL\\;TYPE=INTERN\\ nET:jdonate@ieee.org\\nEND:VCARD\\n",
+    """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24"^^xsd:date, "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "imagem/jpeg";
+  dc:format "imagem/jpeg";
+  :technicalSize "1385472";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/32122/FIOCRUZ_Redes_INFOGRAFICO_v8_240517.jpg"^^xsd:anyURI,
+    "https://www.arca.fiocruz.br/bitstream/handle/icict/32122/FIOCRUZ_Redes_INFOGRAFICO_v8_240517.jpg";
+  :technicalRequirementOrCompositeMinimumVersion "Não informado";
+  :technicalRequirementOrCompositeMaximumVersion "Não informado";
+  :technicalInstallationRemarks "baixe o arquivo FIOCRUZ_Redes_INFOGRAFICO_v8_240517. JPEG e abra em qualquer programa que leia este formato ou no seu navegador da web."@pt-BR;
+  :technicalOtherPlatformRequirements "qualquer leitor de imagem"@pt-BR;
+  :technicalDuration "PT01M00S"^^xsd:duration;
+  :educationalTypicalAgeRange "adultos, sem faixa etária definida"@pt-BR;
+  :educationalTypicalLearningTime "PT01M00S"^^xsd:duration;
+  :educationalDescription "Promover a aprendizagem em rede e promover o conhecimento aplicado, a geração de novas tecnologias e inovação para o desenvolvimento profissional e institucional."@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC-BY-NC"@pt-BR, "Acesso Aberto"@pt-BR,
+    "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  dc:rights "Licença Creative Commons Não Comercial – CC-BY-NC"@pt-BR, "Acesso Aberto"@pt-BR,
+    "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/13566"^^xsd:anyURI,
+    "https://www.arca.fiocruz.br/handle/icict/13566";
+  :relationResourceDescription "Escola Corporativa Fiocruz"@pt-BR;
+  dc:relation "Escola Corporativa Fiocruz"@pt-BR;
+  :annotationEntity "BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\ nTEL:+55-27-9994-18243\\nTITLE: Biblioteca Ceforr\\, Bibliotecária\\n  EMAIL\\;TYPE=INTERN\\ nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n",
+    """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25"^^xsd:date, "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription " Infográfico que apresenta modelo de Gestão do conhecimento com input no Plano estratégico e RH da Fiocruz, apresentando a Rede de Conteúdos, Rede de Ambientes Aprendizes, Rede Social da Gestão com Output no Conhecimento Aplicado e Inovação de Projetos e processos. Recurso pode ser utilizado como exemplo de processos semelhantes em outras organizações."@pt-BR,
+    "Infográfico que apresenta modelo de Gestão do conhecimento com input no Plano estratégico e RH da Fiocruz, apresentando a Rede de Conteúdos, Rede de Ambientes Aprendizes, Rede Social da Gestão com Output no Conhecimento Aplicado e Inovação de Projetos e processos. Recurso pode ser utilizado como exemplo de processos semelhantes em outras organizações."@pt-BR;
+  :classificationTaxonPathSource "Dewey Decimal Classification (DDC)"@en, """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "658.4058";
+  :classificationTaxonPathTaxonEntry "Gestão do Conhecimento"@pt-BR, "gestão do conhecimento"@pt-BR;
+  :classificationDescription "Explicação sobre aprendizagem em Rede no modelo de Gestão do Conhecimento da Fiocruz"@pt-BR;
+  :classificationKeyword "Aprendizagem em Rede"@pt-BR, "Gestão do Conhecimento"@pt-BR,
+    "Rede de Conteúdos"@pt-BR, "Educação em saúde"@pt-BR, "gestão do conhecimento"@pt-BR,
+    "rede de conteúdos"@pt-BR, "rede social da gestão"@pt-BR, "aprendizagem em Rede"@pt-BR,
+    "educação em saúde"@pt-BR;
+  dc:creator """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  dc:othercontributor """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n, Author""" .
+
+data:OA002 a :LearningObject;
+  dc:title "A Pesquisa e a inovação da biodiversidade brasileira"@pt-BR;
+  dc:description """Apresentação de Cristina Ropke, diretora executiva da Phytobios, durante o 1º Seminário Internacional das RedesFito, organizado por Farmanguinhos com a proposta de discutir a inovação 
+e a biodiversidade sob a ótica da sustentabilidade. Cristina provoca a reflexão a partir da música que País é esse? de Renato Russo, os sistemas de governo, o verdadeiro papel das agências reguladoras e a política nacional de plantas medicinais e fitoterápicos a oportunidade para estabelecer um modelo de desenvolvimento próprio e soberano na áreaa de saúde e uso de plantas medicinais e fitoterápicos, que prime pelo uso sustentável dos componentes da biodiversidade e respeito aos princípios éticos e compromissos internacionais assumidos."""@pt-BR;
+  :generalStruture :Atomic;
+  :generalAggregationLevel :Level1;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Author;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :Browser;
+  :technicalRequirementOrCompositeName :Any;
+  :educationalInteractivityType :Expositive;
+  :educationalLearningResourceType :Lecture;
+  dc:type "Lecture";
+  :educationalInteractivityLevel :Low;
+  :educationalSemanticDensity :Medium;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Training;
+  :educationalDifficulty :Easy;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :Idea;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/20416"^^xsd:anyURI;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/20416"^^xsd:anyURI;
+  :generalTitle "A Pesquisa e a inovação da biodiversidade brasileira"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  dc:language "pt-BR"^^dc:language;
+  :generalDescription """Apresentação de Cristina Ropke, diretora executiva da Phytobios, durante o 1º Seminário Internacional das RedesFito, organizado por Farmanguinhos com a proposta de discutir a inovação 
+e a biodiversidade sob a ótica da sustentabilidade. Cristina provoca a reflexão a partir da música que País é esse? de Renato Russo, os sistemas de governo, o verdadeiro papel das agências reguladoras e a política nacional de plantas medicinais e fitoterápicos a oportunidade para estabelecer um modelo de desenvolvimento próprio e soberano na áreaa de saúde e uso de plantas medicinais e fitoterápicos, que prime pelo uso sustentável dos componentes da biodiversidade e respeito aos princípios éticos e compromissos internacionais assumidos."""@pt-BR;
+  :generalKeyword "gestão de ciência"@pt-BR, "tecnologia e inovação em saúde"@pt-BR,
+    "legislação de medicamentos"@pt-BR, "medicamentos fitoterápicos"@pt-BR, "pesquisa"@pt-BR;
+  dc:subject "gestão de ciência"@pt-BR, "tecnologia e inovação em saúde"@pt-BR, "legislação de medicamentos"@pt-BR,
+    "medicamentos fitoterápicos"@pt-BR, "pesquisa"@pt-BR, "fitoterápicos"@pt-BR, "medicamentos"@pt-BR,
+    "sustentabilidade"@pt-BR, "meio ambiente"@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  dc:coverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Ropke, Cristina\\
+NTEL:+55-011-4689-0989\\nTITLE:
+Phytobios\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:info@centroflora.com.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2017-07-26T00:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "video/mp4";
+  dc:format "video/mp4";
+  :technicalSize "105906176";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/20416/REDESFITOS CRISTINA ROPKE.mp4";
+  :technicalInstallationRemarks "baixe o arquivo REDESFITOS CRISTINA ROPKE.mp4 e abra em qualquer programa que leia este formato."@pt-BR;
+  :technicalOtherPlatformRequirements "qualquer programa que leia mp4"@pt-BR;
+  :technicalDuration "PT33M47S"^^xsd:duration;
+  :educationalTypicalAgeRange "adultos, sem faixa etária definida"@pt-BR;
+  :educationalTypicalLearningTime "PT33M47S"^^xsd:duration;
+  :educationalDescription "Refletir sobre o verdadeiro papel das agências reguladoras e a política nacional de plantas medicinais e fitoterápicos para a oportunidade de estabelecer um modelo de desenvolvimento próprio e soberano na área de saúde e uso de plantas medicinais e fitoterápicos, que prime pelo uso sustentável dos componentes da biodiversidade e respeito aos princípios éticos e compromissos internacionais assumidos."@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC BY NC - SA. Partilha nos mesmos termos 3.0 Não adaptada."@pt-BR;
+  dc:rights "Licença Creative Commons Não Comercial – CC BY NC - SA. Partilha nos mesmos termos 3.0 Não adaptada."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/15463";
+  :relationResourceDescription "Farmanguinhos"@pt-BR;
+  dc:relation "Farmanguinhos"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription "vídeo da apresentação de Cristina Ropke, diretora executiva da Phytobios, onde a palestrante expõe slides, figuras e informações com a proposta de discutir a inovação e a biodiversidade sob a ótica da sustentabilidade. Cristina provoca a reflexão a partir da música que País é esse? de Renato Russo, os sistemas de governo, o verdadeiro papel das agências reguladoras e a política nacional de plantas medicinais e fitoterápicos a oportunidade para estabelecer um modelo de desenvolvimento próprio e soberano na área de saúde e uso de plantas medicinais e fitoterápicos, que prime pelo uso sustentável dos componentes da biodiversidade e respeito aos princípios éticos e compromissos internacionais assumidos."@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "615.321";
+  :classificationTaxonPathTaxonEntry "farmacognosia"@pt-BR;
+  :classificationDescription "Explicação sobre a pesquisa dos fitoterápicos no Brasil, sob a égide da sustentabilidade."@pt-BR;
+  :classificationKeyword "fitoterápicos"@pt-BR, "medicamentos"@pt-BR, "sustentabilidade"@pt-BR,
+    "meio ambiente"@pt-BR;
+  dc:creator """BEGIN:VCARD\\nFN:Ropke, Cristina\\
+NTEL:+55-011-4689-0989\\nTITLE:
+Phytobios\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:info@centroflora.com.br\\nEND:VCARD\\n""";
+  dc:othercontributor """BEGIN:VCARD\\nFN:Ropke, Cristina\\
+NTEL:+55-011-4689-0989\\nTITLE:
+Phytobios\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:info@centroflora.com.br\\nEND:VCARD\\n, Author""" .
+
+data:OA003 a :LearningObject;
+  dc:title "Manuseio mínimo do recém-nascido"@pt-BR;
+  dc:description "Este material faz parte do Portal de Boas Práticas em Saúde da Mulher, da Criança e do Adolescente do IFF/Fiocruz. O Portal oferece conteúdo sistematizado por especialistas e disponível em diversos formatos, como apresentação de slides e vídeos curtos, todos com links para as referências citadas. Esse material tem sido usado principalmente em atividades de educação permanente e de formação profissional em diferentes unidades do Sistema Único de Saúde (SUS), contribuindo para a revisão de processos clínicos norteados pelas boas práticas."@pt-BR;
+  :generalStruture :Atomic;
+  :generalAggregationLevel :Level1;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Author;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :Browser;
+  :technicalRequirementOrCompositeName :Any;
+  :educationalInteractivityType :Expositive;
+  :educationalLearningResourceType :Lecture;
+  dc:type "Lecture";
+  :educationalInteractivityLevel :Low;
+  :educationalSemanticDensity :Medium;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Training;
+  :educationalDifficulty :Easy;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :EducationalObjective;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/30266"^^xsd:anyURI;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/30266"^^xsd:anyURI;
+  :generalTitle "Manuseio mínimo do recém-nascido"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  dc:language "pt-BR"^^dc:language;
+  :generalDescription "Este material faz parte do Portal de Boas Práticas em Saúde da Mulher, da Criança e do Adolescente do IFF/Fiocruz. O Portal oferece conteúdo sistematizado por especialistas e disponível em diversos formatos, como apresentação de slides e vídeos curtos, todos com links para as referências citadas. Esse material tem sido usado principalmente em atividades de educação permanente e de formação profissional em diferentes unidades do Sistema Único de Saúde (SUS), contribuindo para a revisão de processos clínicos norteados pelas boas práticas."@pt-BR;
+  :generalKeyword "unidades de terapia intensiva neonatal"@pt-BR, "recém-nascido prematuro"@pt-BR,
+    "manuseio mínimo"@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  dc:coverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-2598-4242\\nTITLE:
+Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:fiocruz@fiocruz.br\\nEND:VCARD\\n , BEGIN:VCARD\\nFN:Instituto Nacional de Saúde da Mulher, da Criança e do Adolescente Fernandes Figueira\\
+NTEL:+55-021-)2554-1700\\nTITLE:
+Phytobios\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:info@centroflora.com.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2018-11-27T00:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "texto/pdf";
+  dc:format "texto/pdf";
+  :technicalSize "954368";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/30266/manuseiominimo-180312182603.pdf";
+  :technicalInstallationRemarks "baixe o arquivo manuseiominimo-180312182603.pdf e abra em qualquer leitor de PDF."@pt-BR;
+  :technicalOtherPlatformRequirements "qualquer programa que leia pdf"@pt-BR;
+  :educationalTypicalAgeRange "adultos, sem faixa etária definida"@pt-BR;
+  :educationalDescription "Apresentar aos profissionais de saúde condutas que auxiliem na redução de estímulos nocivos; minimizem o estresse e a dor causados aos recém-nascidos devido a manuseios excessivos, promovendo neuroproteção; melhorem a qualidade de vida e diminuam os riscos de sequelas em menores de 1500 kg."@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  dc:rights "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/15490";
+  :relationResourceDescription "IFF"@pt-BR;
+  dc:relation "IFF"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription """Este material faz parte do Portal de Boas Práticas em Saúde da Mulher, da Criança e do Adolescente do IFF/Fiocruz. Com informações para: Auxiliar na redução de estímulos nocivos.
+Minimizar o estresse e a dor causados aos recém-nascidos devido a manuseios excessivos, promovendo neuroproteção.
+Melhorar a qualidade de vida e diminuir os riscos de sequelas em
+menores de 1500g."""@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "618.920028";
+  :classificationTaxonPathTaxonEntry "tratamento intensivo pediátrico"@pt-BR;
+  :classificationDescription "explicação sobre conduta e cuidados com o manuseio de recém-nascidos com peso igual a 1500 gramasna UTIN"@pt-BR;
+  :classificationKeyword "unidades de terapia intensiva neonatal"@pt-BR, "recém-nascido prematuro"@pt-BR,
+    "pediatria"@pt-BR;
+  dc:creator """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-2598-4242\\nTITLE:
+Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:fiocruz@fiocruz.br\\nEND:VCARD\\n , BEGIN:VCARD\\nFN:Instituto Nacional de Saúde da Mulher, da Criança e do Adolescente Fernandes Figueira\\
+NTEL:+55-021-)2554-1700\\nTITLE:
+Phytobios\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:info@centroflora.com.br\\nEND:VCARD\\n""";
+  dc:othercontributor """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-2598-4242\\nTITLE:
+Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:fiocruz@fiocruz.br\\nEND:VCARD\\n , BEGIN:VCARD\\nFN:Instituto Nacional de Saúde da Mulher, da Criança e do Adolescente Fernandes Figueira\\
+NTEL:+55-021-)2554-1700\\nTITLE:
+Phytobios\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:info@centroflora.com.br\\nEND:VCARD\\n, Author""" .
+
+data:OA004 a :LearningObject;
+  dc:title "Fiocruz no Ar - Os riscos do consumo de antibióticos sem receita médica"@pt-BR;
+  dc:description "Podcast que integra o projeto Fiocruz no Ar."@pt-BR;
+  :generalStruture :Collection;
+  :generalAggregationLevel :Level2;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Provider;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :Browser;
+  :technicalRequirementOrCompositeName :Any;
+  :educationalInteractivityType :Expositive;
+  :educationalLearningResourceType :Interview;
+  dc:type "Interview";
+  :educationalInteractivityLevel :Low;
+  :educationalSemanticDensity :Medium;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Training;
+  :educationalDifficulty :Easy;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :EducationalObjective;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/33461"^^xsd:anyURI;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/33461"^^xsd:anyURI;
+  :generalTitle "Fiocruz no Ar - Os riscos do consumo de antibióticos sem receita médica"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  dc:language "pt-BR"^^dc:language;
+  :generalDescription "Podcast que integra o projeto Fiocruz no Ar."@pt-BR;
+  :generalKeyword "antibióticos"@pt-BR, "medicamento sem receita"@pt-BR, "auto-medicação"@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  dc:coverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2019-06-11T00:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "áudio/mp3";
+  dc:format "áudio/mp3";
+  :technicalSize "5284823040";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/33461/FIOCRUZ_ANTIBIOTICO_SEM_RECEITA_OS%20RISCOS.mp3";
+  :technicalInstallationRemarks "baixe o arquivo FIOCRUZ_ANTIBIOTICO_SEM_RECEITA_OS RISCOS.mp3abra em qualquer leitor de áudio ou agregador de Podcast."@pt-BR;
+  :technicalOtherPlatformRequirements "qualquer programa que leia mp3"@pt-BR;
+  :technicalDuration "PT02M45S"^^xsd:duration;
+  :educationalTypicalAgeRange "adultos, sem faixa etária definida"@pt-BR;
+  :educationalTypicalLearningTime "PT02M45S"^^xsd:duration;
+  :educationalDescription "Maya Sangawa, jornalista autônoma, convidada pela Vice-Presidência de Educação, Informação e Comunicação para colaborar na produção de cinco áudios (podcast) da série Fiocruz no Ar: 1. Infecção Hospitalar; 2. Tuberculose 01 - Diagnóstico e tratamento; 3. Tuberculose 02 - Tuberculose resistente; 4. Uso correto do antibiótico e 5. Os riscos do consumo de antibióticos sem receita médica (Projeto VPEIC 004-Fio-17-2-54-39)."@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  dc:rights "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/40761";
+  :relationResourceDescription "ICICT – Áudio"@pt-BR;
+  dc:relation "ICICT – Áudio"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription "podcast com entrevista com Maya Sangawa, jornalista autônoma, convidada pela Vice-Presidência de Educação, Informação e Comunicação para colaborar na produção de cinco áudios (podcast) da série Fiocruz no Ar: 1. Infecção Hospitalar; 2. Tuberculose 01 - Diagnóstico e tratamento; 3. Tuberculose 02 - Tuberculose resistente; 4. Uso correto do antibiótico e 5. Os riscos do consumo de antibióticos sem receita médica (Projeto VPEIC 004-Fio-17-2-54-39)"@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "615.40202";
+  :classificationTaxonPathTaxonEntry "medicamentos – prescrição"@pt-BR;
+  :classificationDescription "explicação sobre os perigos da utilização de antibióticos sem receita médica."@pt-BR;
+  :classificationKeyword "antibióticos"@pt-BR, "automedicação"@pt-BR;
+  dc:othercontributor """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n, Provider""" .
+
+data:OA005 a :LearningObject;
+  dc:title "Fiocruz no Ar - Os riscos do consumo de antibióticos sem receita médica"@pt-BR;
+  dc:description "Vinheta de apresentação do  Fiocruz no Ar."@pt-BR;
+  :generalStruture :Collection;
+  :generalAggregationLevel :Level2;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Provider;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :Browser;
+  :technicalRequirementOrCompositeName :Any;
+  :educationalInteractivityType :Expositive;
+  :educationalLearningResourceType :Figure;
+  dc:type "Figure";
+  :educationalInteractivityLevel :Low;
+  :educationalSemanticDensity :Low;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Training;
+  :educationalDifficulty :Easy;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :EducationalObjective;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/33461"^^xsd:anyURI;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/33461"^^xsd:anyURI;
+  :generalTitle "Fiocruz no Ar - Os riscos do consumo de antibióticos sem receita médica"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  dc:language "pt-BR"^^dc:language;
+  :generalDescription "Vinheta de apresentação do  Fiocruz no Ar."@pt-BR;
+  :generalKeyword "podcast"@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  dc:coverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Queiroz, Claudete Fernandes de\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Freyre, Éder de Almeida\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2019-06-11T00:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "imagem/png";
+  dc:format "imagem/png";
+  :technicalSize "357580";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/33461/PROJETO_FIOCRUZ_NO_AR_Riscos_consumo_antibi%c3%b3ticos_sem_receita_m%c3%a9dica.png";
+  :technicalInstallationRemarks "baixe o arquivo PROJETO_FIOCRUZ_NO_AR_Riscos_consumo_antibi%c3%b3ticos_sem_receita_m%c3%a9dica.png e a em qualquer leisistema que leia este formato"@pt-BR;
+  :technicalOtherPlatformRequirements "qualquer programa que leia png"@pt-BR;
+  :educationalTypicalAgeRange "adultos, sem faixa etária definida"@pt-BR;
+  :educationalDescription "figura de abertura para podcast Fiocruz no Ar  - Os riscos do consumo de antibióticos sem receita médica"@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  dc:rights "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/bitstream/handle/icict/33461/FIOCRUZ_ANTIBIOTICO_SEM_RECEITA_OS%20RISCOS.mp3";
+  :relationResourceDescription "Fiocruz no Ar - Os riscos do consumo de antibióticos sem receita médica"@pt-BR;
+  dc:relation "Fiocruz no Ar - Os riscos do consumo de antibióticos sem receita médica"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription "figura da vinheta do podcast “Os riscos do consumo de antibióticos sem receita médica”"@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "615.40202";
+  :classificationTaxonPathTaxonEntry "medicamentos – prescrição"@pt-BR;
+  :classificationDescription "Figura de abertura do Podcast do Projeto Fiocruz no Ar que produz podcasts para serem distribuídos para rádios interessadas em veicular – gratuitamente – informação de qualidade, tendo como referência a expertise de 118 anos da Fundação Oswaldo Cruz - FIOCRUZ, do Ministério da Saúde. A distribuição do material também é feita pelo Whatsapp, para que a informação chegue a um maior número de pessoas"@pt-BR;
+  :classificationKeyword "podcast"@pt-BR;
+  dc:othercontributor """BEGIN:VCARD\\nFN:Queiroz, Claudete Fernandes de\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Freyre, Éder de Almeida\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n, Provider""" .
+
+data:OA006 a :LearningObject;
+  dc:title "Curso Profissional da Informação e Repositórios"@pt-BR;
+  dc:description """o curso tem como proposta abordar as habilidades e competências necessárias para o
+trabalho desenvolvido nos Repositórios pelos profissionais de informação – os Bibliotecários - que são considerados como gestores do conhecimento, atuando em vários serviços e processos dentro das Bibliotecas e dos Centros de Documentação de
+uma organização."""@pt-BR;
+  :generalStruture :Collection;
+  :generalAggregationLevel :Level4;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Author;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :Browser;
+  :technicalRequirementOrCompositeName :Any;
+  :educationalInteractivityType :Expositive;
+  :educationalLearningResourceType :Slide;
+  dc:type "Slide";
+  :educationalInteractivityLevel :Low;
+  :educationalSemanticDensity :VeryHigh;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Training;
+  :educationalDifficulty :Difficult;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :EducationalObjective;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/48701"^^xsd:anyURI;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/48701"^^xsd:anyURI;
+  :generalTitle "Curso Profissional da Informação e Repositórios"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  dc:language "pt-BR"^^dc:language;
+  :generalDescription """o curso tem como proposta abordar as habilidades e competências necessárias para o
+trabalho desenvolvido nos Repositórios pelos profissionais de informação – os Bibliotecários - que são considerados como gestores do conhecimento, atuando em vários serviços e processos dentro das Bibliotecas e dos Centros de Documentação de
+uma organização."""@pt-BR;
+  :generalKeyword "repositório"@pt-BR, "profissional da informação."@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  dc:coverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2021-08-23T03:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "texto/pdf";
+  dc:format "texto/pdf";
+  :technicalSize "5435817";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/48701/Curso_Profissional_RI_13082021.pdf";
+  :technicalInstallationRemarks "baixe o arquivo Curso_Profissional_RI_13082021.pdf e abra em qualquer programa que abra este formato"@pt-BR;
+  :technicalOtherPlatformRequirements "qualquer programa que leia pdf"@pt-BR;
+  :educationalTypicalAgeRange "adultos, sem faixa etária definida"@pt-BR;
+  :educationalTypicalLearningTime "PT02H00M"^^xsd:duration;
+  :educationalDescription "Abordar as habilidades e competências necessárias para o trabalho desenvolvido nos Repositórios pelos profissionais de informação – os Bibliotecários."@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  dc:rights "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/12005";
+  :relationResourceDescription "ICICT - REA – Texto"@pt-BR;
+  dc:relation "ICICT - REA – Texto"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription "“A Rede Sudeste de Repositórios Institucionais (Sudeste/RIAA) realizou no dia 13/08/2021 o sétimo curso intitulado \"Profissional da Informação e Repositórios\" ministrado pelos Mestres Claudete Fernandes de Queiroz e Éder de Almeida Freyre ambos da Fiocruz. O treinamento é resultado de um projeto da Rede chamado \"Montagem de Cursos\", que tem como objetivo oferecer diferentes capacitações aos membros das instituições que fazem parte da Sudeste/RIAA.”"@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "023.2";
+  :classificationTaxonPathTaxonEntry "bibliotecários, consultores, analistas de sistemas"@pt-BR;
+  :classificationDescription "A aula tem como proposta abordar as habilidades e competências necessárias para o trabalho desenvolvido nos Repositórios pelos profissionais de informação – os Bibliotecários - que são considerados como gestores do conhecimento, atuando em vários serviços e processos dentro das Bibliotecas e dos Centros de Documentação de uma organização."@pt-BR;
+  :classificationKeyword "bibliotecários"@pt-BR, "repositórios"@pt-BR;
+  dc:creator """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  dc:othercontributor """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n, Author""" .
+
+data:OA007 a :LearningObject;
+  dc:title "Curso Profissional da Informação e Repositórios"@pt-BR;
+  dc:description "Figura para divulgação do Curso Profissional da Informação e Repositórios"@pt-BR;
+  :generalStruture :Collection;
+  :generalAggregationLevel :Level2;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Author;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :Browser;
+  :technicalRequirementOrCompositeName :Any;
+  :educationalInteractivityType :Expositive;
+  :educationalLearningResourceType :Figure;
+  dc:type "Figure";
+  :educationalInteractivityLevel :Low;
+  :educationalSemanticDensity :VeryLow;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Training;
+  :educationalDifficulty :VeryEasy;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :EducationalObjective;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/48701"^^xsd:anyURI;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/48701"^^xsd:anyURI;
+  :generalTitle "Curso Profissional da Informação e Repositórios"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  dc:language "pt-BR"^^dc:language;
+  :generalDescription "Figura para divulgação do Curso Profissional da Informação e Repositórios"@pt-BR;
+  :generalKeyword "repositório"@pt-BR, "profissional da informação."@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  dc:coverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2021-08-23T03:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "imagem/jpg";
+  dc:format "imagem/jpg";
+  :technicalSize "79534";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/48701/curso_profissional_RI_13082021.jpg";
+  :technicalInstallationRemarks "baixe o arquivo Curso_Profissional_RI_13082021.jpgabra em qualquer programa que abra este formato"@pt-BR;
+  :technicalOtherPlatformRequirements "qualquer programa que leia jpg"@pt-BR;
+  :educationalTypicalAgeRange "adultos, sem faixa etária definida"@pt-BR;
+  :educationalDescription "Divulgar o Curso profissional da informação e repositórios"@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  dc:rights "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/bitstream/handle/icict/48701/Curso_Profissional_RI_13082021.pdf";
+  :relationResourceDescription "ICICT - REA – Texto"@pt-BR;
+  dc:relation "ICICT - REA – Texto"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription "“A Rede Sudeste de Repositórios Institucionais (Sudeste/RIAA) realizou no dia 13/08/2021 o sétimo curso intitulado \"Profissional da Informação e Repositórios\" ministrado pelos Mestres Claudete Fernandes de Queiroz e Éder de Almeida Freyre ambos da Fiocruz. O treinamento é resultado de um projeto da Rede chamado \"Montagem de Cursos\", que tem como objetivo oferecer diferentes capacitações aos membros das instituições que fazem parte da Sudeste/RIAA.”"@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "023.2";
+  :classificationTaxonPathTaxonEntry "bibliotecários, consultores, analistas de sistemas"@pt-BR;
+  :classificationDescription "A aula tem como proposta abordar as habilidades e competências necessárias para o trabalho desenvolvido nos Repositórios pelos profissionais de informação – os Bibliotecários - que são considerados como gestores do conhecimento, atuando em vários serviços e processos dentro das Bibliotecas e dos Centros de Documentação de uma organização."@pt-BR;
+  :classificationKeyword "bibliotecários"@pt-BR, "repositórios"@pt-BR;
+  dc:creator """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  dc:othercontributor """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n, Author""" .
+
+data:OA008 a :LearningObject;
+  dc:title "Desafio Ágora 2030"@pt-BR;
+  dc:description "O Desafio Ágora 2030 é um jogo que acontece em edições temáticas associadas à Agenda 2030 dos Objetivos do Desenvolvimento Sustentável. Ao participar, o jogador transforma o povoado Ágora, em missões colaborativas para solucionar diversos problemas relacionados a temas da Agenda 2030."@pt-BR;
+  :generalStruture :Collection;
+  :generalAggregationLevel :Level3;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Author;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :OperatingSystem;
+  :technicalRequirementOrCompositeName :Android;
+  :educationalInteractivityType :Active;
+  :educationalLearningResourceType :Game;
+  dc:type "Game";
+  :educationalInteractivityLevel :VeryHigh;
+  :educationalSemanticDensity :VeryHigh;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Other;
+  :educationalDifficulty :Difficult;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :EducationalObjective;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/35768"^^xsd:anyURI;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/35768"^^xsd:anyURI;
+  :generalTitle "Desafio Ágora 2030"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  dc:language "pt-BR"^^dc:language;
+  :generalDescription "O Desafio Ágora 2030 é um jogo que acontece em edições temáticas associadas à Agenda 2030 dos Objetivos do Desenvolvimento Sustentável. Ao participar, o jogador transforma o povoado Ágora, em missões colaborativas para solucionar diversos problemas relacionados a temas da Agenda 2030."@pt-BR;
+  :generalKeyword "jogo"@pt-BR, "sustentabilidade."@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  dc:coverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Martins, Cláudia\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2019-09-22T03:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "application/zip";
+  dc:format "application/zip";
+  :technicalSize "34812723";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/35768/agora2030-app-master.zip";
+  :technicalInstallationRemarks "Pacote de arquivos para sistemas mobile compactados no formato zip. Está depositado no Arca apenas para memória não tendo como instalá-lo ou rodá-lo a não ser instalando pelas lojas oficiais do Android ou IOS. Para baixar e instalar acesse a Play Store: https://play.google.com/store/apps/details?id=br.org.agora2030 Ou pela App Store: https://apps.apple.com/us/app/%C3%A1gora-2030/id1307124118?l=pt&ls=1"@pt-BR;
+  :technicalOtherPlatformRequirements "smarthphone ou tablet"@pt-BR;
+  :technicalDuration "PT60M00S"^^xsd:duration;
+  :educationalTypicalAgeRange "adequado para crianças com mais de 7 anos"@pt-BR;
+  :educationalTypicalLearningTime "PT60M00S"^^xsd:duration;
+  :educationalDescription "Compreender a importância das soluções e trabalho colaborativo para enfrentamento de problemas atuais e emergentes."@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  dc:rights "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/15587";
+  :relationResourceDescription "Presidência Fiocruz - REA - Material Multimídia"@pt-BR;
+  dc:relation "Presidência Fiocruz - REA - Material Multimídia"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription "“O Desafio Ágora 2030 é um jogo que acontece em edições temáticas associadas à Agenda 2030 dos Objetivos do Desenvolvimento Sustentável. Ao participar, o jogador transforma o povoado Ágora, em missões colaborativas para solucionar diversos problemas relacionados a temas da Agenda 2030.”)"@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "333.7150";
+  :classificationTaxonPathTaxonEntry "desenvolvimento sustentável"@pt-BR;
+  :classificationDescription "O Desafio Ágora 2030 é um jogo que acontece em edições temáticas associadas à Agenda 2030 dos Objetivos do Desenvolvimento Sustentável. Ao participar, o jogador transforma o povoado Ágora, em missões colaborativas para solucionar diversos problemas relacionados a temas da Agenda 2030"@pt-BR;
+  :classificationKeyword "desenvolvimento sustentável"@pt-BR;
+  dc:creator """BEGIN:VCARD\\nFN:Martins, Cláudia\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  dc:othercontributor """BEGIN:VCARD\\nFN:Martins, Cláudia\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n, Author""" .
+
+data:OA009 a :LearningObject;
+  dc:title "campus virtual de saúde pública (cvsp/opas): uma rede de conhecimento e formação em saúde pública"@pt-BR;
+  dc:description "Capítulo do E-book - Acesso Aberto: da visão à ação: contextos, cenários e práticas - organizado por Madalena Carvalho, publicado pelo repositório da Universidade Aberta - Lisboa, sobre o Campus Virtual de Saúde Pública (CVSP) de autoria de Ana Furniel, Ana Paula Mendonça e Rosane Mendes da Vice-Presidência de Educação, Informação e Comunicação (VPEIC/Fiocruz). O Campus Virtual de Saúde Pública (CVSP) é um espaço para desenvolver cooperação interdisciplinar no campo de formação em saúde pública, uma rede de instituições que compartilham cursos, recursos educacionais e aulas virtuais de forma aberta. Um espaço comunicacional e de aprendizagem, resultado de uma parceria entre a OPAS e os países da região das Américas. Uma rede descentralizada de indivíduos, instituições e organizações que compartilham cursos, recursos, serviços e atividades de educação com o objetivo comum de fortalecer as competências da força de trabalho em saúde pública. Faz uso intensivo de novas tecnologias de informação e comunicação, e educação em saúde tornando-se um espaço de criatividade e inovação. Considerando as premissas da sustentabilidade, educação à distância, modelos de aprendizagem, acesso aberto, redes de formação e recursos educacionais, destacamos neste capítulo a experiência brasileira do Campus Virtual de Saúde Pública (CVSP) da Organização Panamericana de Saúde (OPAS), coordenada pela Fiocruz – Fundação Oswaldo Cruz no Brasil. A iniciativa integra instituições, países e pessoas e garante as ações através de modelos tecnológicos, de governança e pedagógicos, que reforçam o acesso aberto aos recursos educacionais, e uma aprendizagem em rede."@pt-BR;
+  :generalStruture :Atomic;
+  :generalAggregationLevel :Level1;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Author;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :Browser;
+  :technicalRequirementOrCompositeName :Any;
+  :educationalInteractivityType :Expositive;
+  :educationalLearningResourceType :NarrativeText;
+  dc:type "NarrativeText";
+  :educationalInteractivityLevel :Low;
+  :educationalSemanticDensity :Medium;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Other;
+  :educationalDifficulty :Difficult;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :EducationalObjective;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/32166"^^xsd:anyURI;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/32166"^^xsd:anyURI;
+  :generalTitle "campus virtual de saúde pública (cvsp/opas): uma rede de conhecimento e formação em saúde pública"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  dc:language "pt-BR"^^dc:language;
+  :generalDescription "Capítulo do E-book - Acesso Aberto: da visão à ação: contextos, cenários e práticas - organizado por Madalena Carvalho, publicado pelo repositório da Universidade Aberta - Lisboa, sobre o Campus Virtual de Saúde Pública (CVSP) de autoria de Ana Furniel, Ana Paula Mendonça e Rosane Mendes da Vice-Presidência de Educação, Informação e Comunicação (VPEIC/Fiocruz). O Campus Virtual de Saúde Pública (CVSP) é um espaço para desenvolver cooperação interdisciplinar no campo de formação em saúde pública, uma rede de instituições que compartilham cursos, recursos educacionais e aulas virtuais de forma aberta. Um espaço comunicacional e de aprendizagem, resultado de uma parceria entre a OPAS e os países da região das Américas. Uma rede descentralizada de indivíduos, instituições e organizações que compartilham cursos, recursos, serviços e atividades de educação com o objetivo comum de fortalecer as competências da força de trabalho em saúde pública. Faz uso intensivo de novas tecnologias de informação e comunicação, e educação em saúde tornando-se um espaço de criatividade e inovação. Considerando as premissas da sustentabilidade, educação à distância, modelos de aprendizagem, acesso aberto, redes de formação e recursos educacionais, destacamos neste capítulo a experiência brasileira do Campus Virtual de Saúde Pública (CVSP) da Organização Panamericana de Saúde (OPAS), coordenada pela Fiocruz – Fundação Oswaldo Cruz no Brasil. A iniciativa integra instituições, países e pessoas e garante as ações através de modelos tecnológicos, de governança e pedagógicos, que reforçam o acesso aberto aos recursos educacionais, e uma aprendizagem em rede."@pt-BR;
+  :generalKeyword "gestão do conhecimento para a pesquisa em saúde"@pt-BR, "repositórios institucionais."@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  dc:coverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Furniel, Ana Cristina da Matta\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Furniel, Mendonça, Ana Paula Bernardo\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Silva, Rosane Mendes da\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2019-03-19T03:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "texto/pdf";
+  dc:format "texto/pdf";
+  :technicalSize "2401239";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/32166/E_book_Ana%20Furniel.pdf";
+  :technicalInstallationRemarks "baixe o arquivo manuseiominimo-E_book_Ana Furniel.pdf e abra em qualquer leitor de PDF."@pt-BR;
+  :educationalTypicalAgeRange "adultos, sem faixa etária definida"@pt-BR;
+  :educationalDescription "Fortalecer a formação profissional em saúde pública, por meio do uso intensivo de tecnologias de informação e comunicação (TICs)"@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  dc:rights "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/15588";
+  :relationResourceDescription "Presidência Fiocruz - REA – Texto"@pt-BR;
+  dc:relation "Presidência Fiocruz - REA – Texto"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription "“Fortalecer a formação profissional em saúde pública, por meio do uso intensivo de tecnologias de informação e comunicação (TICs).”)"@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "658.4058";
+  :classificationTaxonPathTaxonEntry "gestão do conhecimento"@pt-BR;
+  :classificationDescription "Fortalecer a formação profissional em saúde pública, por meio do uso intensivo de tecnologias de informação e comunicação (TICs)"@pt-BR;
+  :classificationKeyword "gestão do conhecimento"@pt-BR, "informação em saúde"@pt-BR;
+  dc:creator """BEGIN:VCARD\\nFN:Furniel, Ana Cristina da Matta\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Furniel, Mendonça, Ana Paula Bernardo\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Silva, Rosane Mendes da\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  dc:othercontributor """BEGIN:VCARD\\nFN:Furniel, Ana Cristina da Matta\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Furniel, Mendonça, Ana Paula Bernardo\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Silva, Rosane Mendes da\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n, Author""" .
+
+data:OA010 a :LearningObject;
+  dc:title "curso inteligência artificial documental: aumento de eficiência e qualidade"@pt-BR;
+  dc:description "o curso aborda os avanços da inteligência artificial aplicada a área de documentação, apresentando ferramentas/resultados e discutindo o potencial uso em algumas situações na área documental necessárias para o trabalho desenvolvido nos Repositórios pelos profissionais de informação – os Bibliotecários."@pt-BR;
+  :generalStruture :Collection;
+  :generalAggregationLevel :Level4;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Author;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :Browser;
+  :technicalRequirementOrCompositeName :Any;
+  :educationalInteractivityType :Expositive;
+  :educationalLearningResourceType :NarrativeText;
+  dc:type "NarrativeText";
+  :educationalInteractivityLevel :Low;
+  :educationalSemanticDensity :High;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Training;
+  :educationalDifficulty :Difficult;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :EducationalObjective;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/50574"^^xsd:anyURI;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/50574"^^xsd:anyURI;
+  :generalTitle "curso inteligência artificial documental: aumento de eficiência e qualidade"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  dc:language "pt-BR"^^dc:language;
+  :generalDescription "o curso aborda os avanços da inteligência artificial aplicada a área de documentação, apresentando ferramentas/resultados e discutindo o potencial uso em algumas situações na área documental necessárias para o trabalho desenvolvido nos Repositórios pelos profissionais de informação – os Bibliotecários."@pt-BR;
+  :generalKeyword "educação em saúde"@pt-BR, "inteligência artificial documental"@pt-BR,
+    "documento"@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  dc:coverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Oliveira, Elias de\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Pirovani, Juliana\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2021-12-29T03:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "texto/pdf";
+  dc:format "texto/pdf";
+  :technicalSize "68943872";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/50574/Curso_sobre_Inteligencia_Artificial_Documental_Aumento_de_Eficiencia_Qualidade.pdf";
+  :technicalInstallationRemarks "baixe o arquivo Curso_sobre_Inteligencia_Artificial_Documental_Aumento_de_Eficiencia_Qualidade.pdf e abra em qualquer leitor de PDF."@pt-BR;
+  :technicalOtherPlatformRequirements "qualquer programa que leia pdf"@pt-BR;
+  :educationalTypicalAgeRange "adultos, sem faixa etária definida"@pt-BR;
+  :educationalTypicalLearningTime "PT03H00M"^^xsd:duration;
+  :educationalDescription "Abordar os avanços da inteligência artificial aplicada a área de documentação, apresentando ferramentas/resultados e discutindo o potencial uso em algumas situações na área documental necessárias para o trabalho desenvolvido nos Repositórios pelos profissionais de informação – os Bibliotecários.)"@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  dc:rights "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/12005";
+  :relationResourceDescription "ICICT - REA – Texto"@pt-BR;
+  dc:relation "ICICT - REA – Texto"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription "“A proposta de um curso com os seguintes objetivos: 1) Dar uma visão geral da área, em particular no contexto que envolva o processamento de linguagem natural (Natural Language Processing – NLP); 2) Apresentar algumas dessas ferramentas/resultados e discutir potencial uso em algumas situações na área documental; 3) Discutir potencial aplicações de nosso próprios resultados nos problemas da Fiocruz.”)"@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "006.3";
+  :classificationTaxonPathTaxonEntry "inteligência artificial"@pt-BR;
+  :classificationDescription "Abordar os avanços da inteligência artificial aplicada a área de documentação, apresentando ferramentas/resultados e discutindo o potencial uso em algumas situações na área documental necessárias para o trabalho desenvolvido nos Repositórios pelos profissionais de informação – os Bibliotecários."@pt-BR;
+  :classificationKeyword "inteligência artificial documental"@pt-BR, "repositórios institucionais"@pt-BR;
+  dc:creator """BEGIN:VCARD\\nFN:Oliveira, Elias de\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Pirovani, Juliana\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  dc:othercontributor """BEGIN:VCARD\\nFN:Oliveira, Elias de\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Pirovani, Juliana\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n, Author""" .
