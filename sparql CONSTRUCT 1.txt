@@ -1,0 +1,47 @@
+
+==========================================
+Grafos com SPARQL-CONSTRUCT
+==========================================
+
+# OAs e seus tipos de interatividade educacional
+PREFIX : <http://dados.ufes.br/lomieee/onto#>
+CONSTRUCT {} 
+WHERE {
+	?oa :educationalInteractivityType ?o .
+}
+
+==========================================
+
+# OAs e suas características educacionais
+PREFIX : <http://dados.ufes.br/lomieee/onto#>
+CONSTRUCT {} 
+WHERE {
+      ?oa :educationalInteractivityType ?educ1;
+      :educationalLearningResourceType ?educ2;
+      :educationalInteractivityLevel ?educ3;
+      :educationalSemanticDensity ?educ4;
+      :educationalIntendedEndUserRole ?educ5;
+      :educationalContext ?educ6;
+      :educationalDifficulty ?educ7.
+}
+
+
+==========================================
+Esse tem imagem gerada: Características educacionais OAs onde usuário é aprendiz (GraphDB).png
+
+# Relações entre algumas características educacionais dos OAs cujo papel do usuário final é aprendiz
+PREFIX : <http://dados.ufes.br/lomieee/onto#>
+CONSTRUCT {
+    ?educ1 :tipoRecurso_densidadeSemantica ?educ3 . 
+    ?educ1 :tipoRecurso_tipoInteratividade ?educ2 . 
+    ?educ1 :tipoRecurso_dificuldade ?educ4 .
+    ?educ1 :tipoRecurso_nivelInteratividade ?educ5 .
+} 
+WHERE {
+    ?oa :educationalIntendedEndUserRole :Learner;
+    :educationalLearningResourceType ?educ1;
+    :educationalInteractivityType ?educ2;
+    :educationalSemanticDensity ?educ3;
+    :educationalDifficulty ?educ4;
+    :educationalInteractivityLevel ?educ5 .
+}
