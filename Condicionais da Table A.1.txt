@@ -1,0 +1,55 @@
+Expressões escritas no campo Object no mapeamento RDF no GraphDB:
+
+1) 
+Predicate:
+dc:subject
+
+Object:
+RDF Type = Literal
+Source = GREL
+if(or(cells.classificationPurpose.value=="Discipline",
+      cells.classificationPurpose.value=="Idea"),
+   cells.generalKeyword1.value,
+   null)
+   
+Literal attributes = Language
+Language source: Column
+generalKeyword1Language   
+
+(repetir Object para as outras palavras chave: generalKeyword2, ...)
+
+
+2) 
+Predicate:
+dc:subject
+
+Object:
+RDF Type = Literal
+Source = GREL
+if(or(cells.classificationPurpose.value=="Discipline",
+      cells.classificationPurpose.value=="Idea"),
+   cells.classificationKeyword1.value,
+   null)
+   
+Literal attributes = Language
+Language source: Column
+classificationKeyword1Language   
+
+(repetir Object para as outras palavras chave: classificationKeyword2, ...)
+
+
+
+3) 
+Predicate:
+dc:date
+
+Object:
+RDF Type = Literal
+Source = GREL
+if(cells.lifeCycleContributeRole=="Publisher",
+   cells.lifeCycleContributeDate,
+   null)
+   
+Literal attributes = Datatype
+Language source: Constant
+Contant: xsd:date 

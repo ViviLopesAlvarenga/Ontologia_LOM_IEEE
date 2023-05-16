@@ -1,0 +1,8 @@
+Seguir todos os tipos colocados pelo VocBench no OA001 no arquivo TTL da ontologia operacional (Ontologia operacional - LOM IEE v05 (com 1 OA).ttl)
+
+xsd:date, xsd:anyURI, rdf:langString ...
+
+No GraphDB, especificar no Object:
+Literal attributes = Datatype
+Language source: Constant
+Contant: xsd: ...

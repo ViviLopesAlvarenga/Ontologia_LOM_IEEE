@@ -1,0 +1,2513 @@
+{
+  "baseIRI": "http://example.com/base/",
+  "namespaces": {
+    "data": "http://dados.ufes.br/lomieee/data#",
+    "": "http://dados.ufes.br/lomieee/onto#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "subjectMappings": [
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "title"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "generalTitle",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "generalTitleLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "description"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "generalDescription",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "generalDescriptionLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "generalStruture"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "generalStructure",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "generalAggregationLevel"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "generalAggregationLevel",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "lifeCycleStatus"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "lifeCycleStatus",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "lifeCycleContributeRole"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "lifeCycleContributeRole",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "metaMetadataContributeRole"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "metaMetadataContributeRole",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "technicalRequirementOrCompositeType"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "technicalRequirementOrCompositeType",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "technicalRequirementOrCompositeName"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "technicalRequirementOrCompositeName",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "educationalInteractivityType"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "educationalInteractivityType",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "educationalLearningResourceType"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "educationalLearningResourceType",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "educationalInteractivityLevel"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "educationalInteractivityLevel",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "educationalSemanticDensity"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "educationalSemanticDensity",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "educationalIntendedEndUserRole"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "educationalIntendedEndUserRole",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "educationalContext"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "educationalContext",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "educationalDifficulty"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "educationalDifficulty",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "rightsCost"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "rightsCost",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "rightsCopyrightandOtherRestrictions"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "rightsCopyrightandOtherRestrictions",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "relationKind"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "relationKind",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "classificationPurpose"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "classificationPurpose",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "generalIdentifierCatalog"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "generalIdentifierCatalog",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "generalIdentifierEntry"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "generalIdentifierEntry",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "anyURI"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "generalTitle"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "generalTitle",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "generalTitleLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "generalLanguage"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "generalLanguage",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "language"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "generalDescription"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "generalDescription",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "generalDescriptionLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "generalKeyword"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "generalKeyword1",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "generalKeyword1Language",
+                    "source": "column"
+                  }
+                }
+              }
+            },
+            {
+              "valueSource": {
+                "columnName": "generalKeyword2",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "generalKeyword2Language",
+                    "source": "column"
+                  }
+                }
+              }
+            },
+            {
+              "valueSource": {
+                "columnName": "generalKeyword3",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "generalKeyword3Language",
+                    "source": "column"
+                  }
+                }
+              }
+            },
+            {
+              "valueSource": {
+                "columnName": "generalKeyword4",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "generalKeyword4Language",
+                    "source": "column"
+                  }
+                }
+              }
+            },
+            {
+              "valueSource": {
+                "columnName": "generalKeyword5",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "generalKeyword5Language",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "generalCoverage"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "generalCoverage",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "generalCoverageLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "lifeCycleVersion"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "lifeCycleVersion",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "lifeCycleVersionLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "lifeCycleContributeEntity"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "lifeCycleContributeEntity",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "lifeCycleContributeDate"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "lifeCycleContributeDate",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "date"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "metaMetadataIdentifierCatalog"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "metaMetadataIdentifierCatalog",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "metaMetadataIdentifierEntry"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "metaMetadataIdentifierEntry",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "anyURI"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "metaMetadataContributeEntity"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "metaMetadataContributeEntity",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "metaMetadataContributeDate"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "metaMetadataContributeDate",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "date"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "metaMetadataMetadataSchema"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "metaMetadataMetadataSchema",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "metaMetadataLanguage"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "metaMetadataLanguage",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "language"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "technicalFormat"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "technicalFormat",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "technicalSize"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "technicalSize",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "technicalLocation"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "technicalLocation",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "technicalRequirementOrCompositeMinimumVersion"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "technicalRequirementOrCompositeMinimumVersion",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "technicalRequirementOrCompositeMaximumVersion"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "technicalRequirementOrCompositeMaximumVersion",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "technicalInstallationRemarks"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "technicalInstallationRemarks",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "technicalInstallationRemarksLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "technicalOtherPlatformRequirements"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "technicalOtherPlatformRequirements",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "technicalOtherPlatformRequirementsLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "technicalDuration"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "technicalDuration",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "duration"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "educationalTypicalAgeRange"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "educationalTypicalAgeRange",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "educationalTypicalAgeRangeLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "educationalTypicalLearningTime"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "educationalTypicalLearningTime",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "duration"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "educationalDescription"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "educationalDescription",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "educationalDescriptionLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "educationalLanguage"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "educationalLanguage",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "language"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "rightsDescription"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "rightsDescription",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "educationalDescriptionLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "relationResourceIdentifierCatalog"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "relationResourceIdentifierCatalog",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "relationResourceIdentifierEntry"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "relationResourceIdentifierEntry",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "relationResourceDescription"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "relationResourceDescription",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "relationResourceDescriptionLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "annotationEntity"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "annotationEntity",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "annotationDate"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "annotationDate",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "date"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "annotationDescription"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "annotationDescription",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "annotationDescriptionLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "classificationTaxonPathSource"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "classificationTaxonPathSource",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "classificationTaxonPathSourceLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "classificationTaxonPathTaxonId"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "classificationTaxonPathTaxonId",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "classificationTaxonPathTaxonEntry"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "classificationTaxonPathTaxonEntry",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "classificationTaxonPathTaxonEntryLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "classificationDescription"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "classificationDescription",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "classificationDescriptionLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "classificationKeyword"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "classificationKeyword1",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "classificationKeyword1Language",
+                    "source": "column"
+                  }
+                }
+              }
+            },
+            {
+              "valueSource": {
+                "columnName": "classificationKeyword2",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "classificationKeyword2Language",
+                    "source": "column"
+                  }
+                }
+              }
+            },
+            {
+              "valueSource": {
+                "columnName": "classificationKeyword3",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "classificationKeyword3Language",
+                    "source": "column"
+                  }
+                }
+              }
+            },
+            {
+              "valueSource": {
+                "columnName": "classificationKeyword4",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "classificationKeyword4Language",
+                    "source": "column"
+                  }
+                }
+              }
+            },
+            {
+              "valueSource": {
+                "columnName": "classificationKeyword5",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "classificationKeyword5Language",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "identifier"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "generalIdentifierEntry",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "anyURI"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "language"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "generalLanguage",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "dc",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "language"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "coverage"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "generalCoverage",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "generalCoverageLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "type"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "educationalLearningResourceType",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "format"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "technicalFormat",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "rights"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "rightsDescription",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "rightsDescriptionLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "relation"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "relationResourceDescription",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "relationResourceDescriptionLanguage",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "subject"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "if(or(cells.classificationPurpose.value==\"Discipline\",\n      cells.classificationPurpose.value==\"Idea\"),\n   cells.generalKeyword1.value,\n   null)",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "generalKeyword1Language",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "subject"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "if(or(cells.classificationPurpose.value==\"Discipline\",\n      cells.classificationPurpose.value==\"Idea\"),\n   cells.generalKeyword2.value,\n   null)",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "generalKeyword2Language",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "subject"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "if(or(cells.classificationPurpose.value==\"Discipline\",\n      cells.classificationPurpose.value==\"Idea\"),\n   cells.generalKeyword3.value,\n   null)",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "generalKeyword3Language",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "subject"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "if(or(cells.classificationPurpose.value==\"Discipline\",\n      cells.classificationPurpose.value==\"Idea\"),\n   cells.generalKeyword4.value,\n   null)",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "generalKeyword4Language",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "subject"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "if(or(cells.classificationPurpose.value==\"Discipline\",\n      cells.classificationPurpose.value==\"Idea\"),\n   cells.generalKeyword5.value,\n   null)",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "generalKeyword5Language",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "subject"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "if(or(cells.classificationPurpose.value==\"Discipline\",\n      cells.classificationPurpose.value==\"Idea\"),\n   cells.classificationKeyword1.value,\n   null)",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "classificationKeyword1Language",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "subject"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "if(or(cells.classificationPurpose.value==\"Discipline\",\n      cells.classificationPurpose.value==\"Idea\"),\n   cells.classificationKeyword2.value,\n   null)",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "classificationKeyword2Language",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "subject"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "if(or(cells.classificationPurpose.value==\"Discipline\",\n      cells.classificationPurpose.value==\"Idea\"),\n   cells.classificationKeyword3.value,\n   null)",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "classificationKeyword3Language",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "subject"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "if(or(cells.classificationPurpose.value==\"Discipline\",\n      cells.classificationPurpose.value==\"Idea\"),\n   cells.classificationKeyword4.value,\n   null)",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "classificationKeyword4Language",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "subject"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "if(or(cells.classificationPurpose.value==\"Discipline\",\n      cells.classificationPurpose.value==\"Idea\"),\n   cells.classificationKeyword5.value,\n   null)",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "type": "language_literal",
+                "language": {
+                  "valueSource": {
+                    "columnName": "classificationKeyword5Language",
+                    "source": "column"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "date"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "if(cells.lifeCycleContributeRole.value==\"Publisher\",\n   cells.lifeCycleContributeDate.value,\n   null)",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "date"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "creator"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "if(cells.lifeCycleContributeRole.value==\"Author\",\n   cells.lifeCycleContributeEntity.value,\n   null)",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "publisher"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "if(cells.lifeCycleContributeRole.value==\"Publisher\",\n   cells.lifeCycleContributeEntity.value,\n   null)",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "source"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "if(cells.relationKind.value==\"IsBasedOn\",\n   cells.relationResource.value,\n   null)",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "dc",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "othercontributor"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "cells.lifeCycleContributeEntity.value + \", \"+ cells.lifeCycleContributeRole.value",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "data",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "Column",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "LearningObject"
+          }
+        }
+      ]
+    }
+  ]
+}
