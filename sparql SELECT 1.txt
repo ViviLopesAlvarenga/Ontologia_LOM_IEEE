@@ -1,0 +1,100 @@
+=========================================
+Consultas SPARQL
+=========================================
+
+# Toda a base RDF (2188 triplas)
+SELECT * where { 
+	?s ?p ?o .
+} limit 10000 
+
+
+=========================================
+# O nome de todos os OAs
+PREFIX : <http://dados.ufes.br/lomieee/onto#> 
+SELECT ?titulo
+WHERE {
+    ?oa :generalTitle ?titulo .
+}
+LIMIT 100
+
+
+=========================================
+# O nome, tipo, formato e identificador de todos os OAs
+PREFIX : <http://dados.ufes.br/lomieee/onto#> 
+SELECT ?titulo ?tipo ?formato ?identificador
+WHERE {
+   ?oa :generalTitle ?titulo ;
+       :educationalLearningResourceType ?tipo ;
+       :technicalFormat ?formato ;
+       :generalIdentifierEntry ?identificador ;
+}
+LIMIT 100
+
+Obs.: o resultado sai duplicado pois o ?tipo não é um literal
+
+=========================================
+# O nome, tipo, formato e identificador de todos os OAs
+PREFIX : <http://dados.ufes.br/lomieee/onto#> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?titulo ?tipo ?formato ?identificador
+WHERE {
+   ?oa :generalTitle ?titulo ;
+       :educationalLearningResourceType ?recursoTipo ;
+       :technicalFormat ?formato ;
+       :generalIdentifierEntry ?identificador .
+   ?recursoTipo skos:prefLabel ?tipo . 
+}
+LIMIT 100
+
+Obs.: é mostrado o prefLabel em português e inglês
+
+=========================================
+# O nome, tipo, formato e identificador de todos os OAs
+PREFIX : <http://dados.ufes.br/lomieee/onto#> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?titulo ?tipo ?formato ?identificador
+WHERE {
+   ?oa :generalTitle ?titulo ;
+       :educationalLearningResourceType ?recursoTipo ;
+       :technicalFormat ?formato ;
+       :generalIdentifierEntry ?identificador .
+   ?recursoTipo skos:prefLabel ?tipo . 
+   FILTER(LANG(?tipo) = "pt")
+}
+LIMIT 100
+
+Obs.: resultado ok, devido o filtro da lingua portuguesa
+
+=========================================
+# Os OAs com nível de interatividade baixo (Low) e nível de dificuldade fácil (Easy).
+PREFIX : <http://dados.ufes.br/lomieee/onto#> 
+SELECT ?titulo ?tipo ?formato ?identificador
+WHERE {
+   ?oa :generalTitle ?titulo ;
+       :educationalLearningResourceType ?recursoTipo ;
+       :technicalFormat ?formato ;
+       :generalIdentifierEntry ?identificador ;
+       :educationalInteractivityLevel :Low ;
+       :educationalDifficulty :Easy .
+   ?recursoTipo skos:prefLabel ?tipo . 
+   FILTER(LANG(?tipo) = "pt")
+}
+LIMIT 100
+
+
+=========================================
+# Os OAs que trabalham com "gestão do conhecimento" e que possuam nível de interatividade baixo (Low) e nível de dificuldade fácil (Easy).
+PREFIX : <http://dados.ufes.br/lomieee/onto#> 
+SELECT ?titulo ?tipo ?formato ?identificador
+WHERE {
+   ?oa :generalTitle ?titulo ;
+       :educationalLearningResourceType ?recursoTipo ;
+       :technicalFormat ?formato ;
+       :generalIdentifierEntry ?identificador ;
+       :educationalInteractivityLevel :Low ;
+       :educationalDifficulty :Easy ;
+       :classificationTaxonPathTaxonEntry "gestão do conhecimento"@pt-BR .
+   ?recursoTipo skos:prefLabel ?tipo . 
+   FILTER(LANG(?tipo) = "pt")
+}
+LIMIT 100

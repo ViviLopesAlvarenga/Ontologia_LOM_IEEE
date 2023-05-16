@@ -1,0 +1,29 @@
+# OAs que tenham o termo 'saúde' no título ou nas  palavras chave
+PREFIX : <http://dados.ufes.br/lomieee/onto#> 
+SELECT ?titulo ?generalKeyword ?classificationKeyword 
+WHERE {
+   ?oa :generalTitle ?titulo ;
+       :generalKeyword ?generalKeyword ;
+       :classificationKeyword ?classificationKeyword .
+
+    FILTER(CONTAINS(?titulo, "saúde"@pt-BR) || 
+           CONTAINS(?generalKeyword, "saúde"@pt-BR) || 
+           CONTAINS(?clasificationKeyword, "saúde"@pt-BR)) .
+}
+LIMIT 100
+
+
+
+# OAs que tenham o termo 'saúde' no título ou nas  palavras chave
+PREFIX : <http://dados.ufes.br/lomieee/onto#> 
+SELECT DISTINCT ?titulo  
+WHERE {
+   ?oa :generalTitle ?titulo ;
+       :generalKeyword ?generalKeyword ;
+       :classificationKeyword ?classificationKeyword .
+
+    FILTER(CONTAINS(?titulo, "saúde"@pt-BR) || 
+           CONTAINS(?generalKeyword, "saúde"@pt-BR) || 
+           CONTAINS(?clasificationKeyword, "saúde"@pt-BR)) .
+}
+LIMIT 100
