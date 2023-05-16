@@ -1,0 +1,960 @@
+@base <http://dados.ufes.br/lomieee/onto#> .
+@prefix data: <http://dados.ufes.br/lomieee/data#> .
+@prefix : <http://dados.ufes.br/lomieee/onto#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:OA001 a :LearningObject;
+  dc:title "Aprendizagem em rede"@pt-BR;
+  dc:description "Apresenta uma arquitetura de aprendizagem em Rede, contemplando três dimensões, que interagem, se complementam e tem como objetivo o conhecimento aplicado, a geração de novas tecnologias e inovação para o desenvolvimento profissional e institucional."@pt-BR;
+  :generalStruture :Atomic;
+  :generalAggregationLevel :Level1;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Author;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :Browser;
+  :technicalRequirementOrCompositeName :Any;
+  :educationalInteractivityType :Expositive;
+  :educationalLearningResourceType :Figure;
+  :educationalInteractivityLevel :Low;
+  :educationalSemanticDensity :Medium;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Training;
+  :educationalDifficulty :Easy;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :Competency;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/32122"^^xsd:anyURI;
+  :generalTitle "Aprendizagem em rede"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  :generalDescription "Apresenta uma arquitetura de aprendizagem em Rede, contemplando três dimensões, que interagem, se complementam e tem como objetivo o conhecimento aplicado, a geração de novas tecnologias e inovação para o desenvolvimento profissional e institucional."@pt-BR;
+  :generalKeyword "aprendizagem em rede"@pt-BR, "gestão do conhecimento"@pt-BR, "rede de conteúdos"@pt-BR,
+    "rede de ambientes aprendizes"@pt-BR, "rede social da gestão"@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2019-03-15T03:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "imagem/jpeg";
+  :technicalSize "1385472";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/32122/FIOCRUZ_Redes_INFOGRAFICO_v8_240517.jpg";
+  :technicalInstallationRemarks "baixe o arquivo FIOCRUZ_Redes_INFOGRAFICO_v8_240517. JPEG e abra em qualquer programa que leia este formato ou no seu navegador da web."@pt-BR;
+  :technicalOtherPlatformRequirements "qualquer leitor de imagem"@pt-BR;
+  :technicalDuration "PT01M00S"^^xsd:duration;
+  :educationalTypicalAgeRange "adultos, sem faixa etária definida"@pt-BR;
+  :educationalTypicalLearningTime "PT01M00S"^^xsd:duration;
+  :educationalDescription "Promover a aprendizagem em rede e promover o conhecimento aplicado, a geração de novas tecnologias e inovação para o desenvolvimento profissional e institucional."@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/13566";
+  :relationResourceDescription "Escola Corporativa Fiocruz"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription "Infográfico que apresenta modelo de Gestão do conhecimento com input no Plano estratégico e RH da Fiocruz, apresentando a Rede de Conteúdos, Rede de Ambientes Aprendizes, Rede Social da Gestão com Output no Conhecimento Aplicado e Inovação de Projetos e processos. Recurso pode ser utilizado como exemplo de processos semelhantes em outras organizações."@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "658.4058";
+  :classificationTaxonPathTaxonEntry "gestão do conhecimento"@pt-BR;
+  :classificationDescription "Explicação sobre aprendizagem em Rede no modelo de Gestão do Conhecimento da Fiocruz"@pt-BR;
+  :classificationKeyword "gestão do conhecimento"@pt-BR, "aprendizagem em Rede"@pt-BR,
+    "educação em saúde"@pt-BR, "rede de conteúdos"@pt-BR, "rede social da gestão"@pt-BR;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/32122"^^xsd:anyURI;
+  dc:language "pt-BR"^^dc:language;
+  dc:coverage "Brasil"@pt-BR;
+  dc:type "Figure";
+  dc:format "imagem/jpeg";
+  dc:rights "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  dc:relation "Escola Corporativa Fiocruz"@pt-BR;
+  dc:creator """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  dc:othercontributor """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n, Author""" .
+
+data:OA002 a :LearningObject;
+  dc:title "A Pesquisa e a inovação da biodiversidade brasileira"@pt-BR;
+  dc:description """Apresentação de Cristina Ropke, diretora executiva da Phytobios, durante o 1º Seminário Internacional das RedesFito, organizado por Farmanguinhos com a proposta de discutir a inovação 
+e a biodiversidade sob a ótica da sustentabilidade. Cristina provoca a reflexão a partir da música que País é esse? de Renato Russo, os sistemas de governo, o verdadeiro papel das agências reguladoras e a política nacional de plantas medicinais e fitoterápicos a oportunidade para estabelecer um modelo de desenvolvimento próprio e soberano na áreaa de saúde e uso de plantas medicinais e fitoterápicos, que prime pelo uso sustentável dos componentes da biodiversidade e respeito aos princípios éticos e compromissos internacionais assumidos."""@pt-BR;
+  :generalStruture :Atomic;
+  :generalAggregationLevel :Level1;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Author;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :Browser;
+  :technicalRequirementOrCompositeName :Any;
+  :educationalInteractivityType :Expositive;
+  :educationalLearningResourceType :Lecture;
+  :educationalInteractivityLevel :Low;
+  :educationalSemanticDensity :Medium;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Training;
+  :educationalDifficulty :Easy;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :Idea;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/20416"^^xsd:anyURI;
+  :generalTitle "A Pesquisa e a inovação da biodiversidade brasileira"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  :generalDescription """Apresentação de Cristina Ropke, diretora executiva da Phytobios, durante o 1º Seminário Internacional das RedesFito, organizado por Farmanguinhos com a proposta de discutir a inovação 
+e a biodiversidade sob a ótica da sustentabilidade. Cristina provoca a reflexão a partir da música que País é esse? de Renato Russo, os sistemas de governo, o verdadeiro papel das agências reguladoras e a política nacional de plantas medicinais e fitoterápicos a oportunidade para estabelecer um modelo de desenvolvimento próprio e soberano na áreaa de saúde e uso de plantas medicinais e fitoterápicos, que prime pelo uso sustentável dos componentes da biodiversidade e respeito aos princípios éticos e compromissos internacionais assumidos."""@pt-BR;
+  :generalKeyword "gestão de ciência"@pt-BR, "tecnologia e inovação em saúde"@pt-BR,
+    "legislação de medicamentos"@pt-BR, "medicamentos fitoterápicos"@pt-BR, "pesquisa"@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Ropke, Cristina\\
+NTEL:+55-011-4689-0989\\nTITLE:
+Phytobios\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:info@centroflora.com.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2017-07-26T00:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "video/mp4";
+  :technicalSize "105906176";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/20416/REDESFITOS CRISTINA ROPKE.mp4";
+  :technicalInstallationRemarks "baixe o arquivo REDESFITOS CRISTINA ROPKE.mp4 e abra em qualquer programa que leia este formato."@pt-BR;
+  :technicalOtherPlatformRequirements "qualquer programa que leia mp4"@pt-BR;
+  :technicalDuration "PT33M47S"^^xsd:duration;
+  :educationalTypicalAgeRange "adultos, sem faixa etária definida"@pt-BR;
+  :educationalTypicalLearningTime "PT33M47S"^^xsd:duration;
+  :educationalDescription "Refletir sobre o verdadeiro papel das agências reguladoras e a política nacional de plantas medicinais e fitoterápicos para a oportunidade de estabelecer um modelo de desenvolvimento próprio e soberano na área de saúde e uso de plantas medicinais e fitoterápicos, que prime pelo uso sustentável dos componentes da biodiversidade e respeito aos princípios éticos e compromissos internacionais assumidos."@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC BY NC - SA. Partilha nos mesmos termos 3.0 Não adaptada."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/15463";
+  :relationResourceDescription "Farmanguinhos"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription "vídeo da apresentação de Cristina Ropke, diretora executiva da Phytobios, onde a palestrante expõe slides, figuras e informações com a proposta de discutir a inovação e a biodiversidade sob a ótica da sustentabilidade. Cristina provoca a reflexão a partir da música que País é esse? de Renato Russo, os sistemas de governo, o verdadeiro papel das agências reguladoras e a política nacional de plantas medicinais e fitoterápicos a oportunidade para estabelecer um modelo de desenvolvimento próprio e soberano na área de saúde e uso de plantas medicinais e fitoterápicos, que prime pelo uso sustentável dos componentes da biodiversidade e respeito aos princípios éticos e compromissos internacionais assumidos."@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "615.321";
+  :classificationTaxonPathTaxonEntry "farmacognosia"@pt-BR;
+  :classificationDescription "Explicação sobre a pesquisa dos fitoterápicos no Brasil, sob a égide da sustentabilidade."@pt-BR;
+  :classificationKeyword "fitoterápicos"@pt-BR, "medicamentos"@pt-BR, "sustentabilidade"@pt-BR,
+    "meio ambiente"@pt-BR;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/20416"^^xsd:anyURI;
+  dc:language "pt-BR"^^dc:language;
+  dc:coverage "Brasil"@pt-BR;
+  dc:type "Lecture";
+  dc:format "video/mp4";
+  dc:rights "Licença Creative Commons Não Comercial – CC BY NC - SA. Partilha nos mesmos termos 3.0 Não adaptada."@pt-BR;
+  dc:relation "Farmanguinhos"@pt-BR;
+  dc:subject "gestão de ciência"@pt-BR, "tecnologia e inovação em saúde"@pt-BR, "legislação de medicamentos"@pt-BR,
+    "medicamentos fitoterápicos"@pt-BR, "pesquisa"@pt-BR, "fitoterápicos"@pt-BR, "medicamentos"@pt-BR,
+    "sustentabilidade"@pt-BR, "meio ambiente"@pt-BR;
+  dc:creator """BEGIN:VCARD\\nFN:Ropke, Cristina\\
+NTEL:+55-011-4689-0989\\nTITLE:
+Phytobios\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:info@centroflora.com.br\\nEND:VCARD\\n""";
+  dc:othercontributor """BEGIN:VCARD\\nFN:Ropke, Cristina\\
+NTEL:+55-011-4689-0989\\nTITLE:
+Phytobios\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:info@centroflora.com.br\\nEND:VCARD\\n, Author""" .
+
+data:OA003 a :LearningObject;
+  dc:title "Manuseio mínimo do recém-nascido"@pt-BR;
+  dc:description "Este material faz parte do Portal de Boas Práticas em Saúde da Mulher, da Criança e do Adolescente do IFF/Fiocruz. O Portal oferece conteúdo sistematizado por especialistas e disponível em diversos formatos, como apresentação de slides e vídeos curtos, todos com links para as referências citadas. Esse material tem sido usado principalmente em atividades de educação permanente e de formação profissional em diferentes unidades do Sistema Único de Saúde (SUS), contribuindo para a revisão de processos clínicos norteados pelas boas práticas."@pt-BR;
+  :generalStruture :Atomic;
+  :generalAggregationLevel :Level1;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Author;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :Browser;
+  :technicalRequirementOrCompositeName :Any;
+  :educationalInteractivityType :Expositive;
+  :educationalLearningResourceType :Lecture;
+  :educationalInteractivityLevel :Low;
+  :educationalSemanticDensity :Medium;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Training;
+  :educationalDifficulty :Easy;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :EducationalObjective;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/30266"^^xsd:anyURI;
+  :generalTitle "Manuseio mínimo do recém-nascido"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  :generalDescription "Este material faz parte do Portal de Boas Práticas em Saúde da Mulher, da Criança e do Adolescente do IFF/Fiocruz. O Portal oferece conteúdo sistematizado por especialistas e disponível em diversos formatos, como apresentação de slides e vídeos curtos, todos com links para as referências citadas. Esse material tem sido usado principalmente em atividades de educação permanente e de formação profissional em diferentes unidades do Sistema Único de Saúde (SUS), contribuindo para a revisão de processos clínicos norteados pelas boas práticas."@pt-BR;
+  :generalKeyword "unidades de terapia intensiva neonatal"@pt-BR, "recém-nascido prematuro"@pt-BR,
+    "manuseio mínimo"@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-2598-4242\\nTITLE:
+Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:fiocruz@fiocruz.br\\nEND:VCARD\\n , BEGIN:VCARD\\nFN:Instituto Nacional de Saúde da Mulher, da Criança e do Adolescente Fernandes Figueira\\
+NTEL:+55-021-)2554-1700\\nTITLE:
+Phytobios\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:info@centroflora.com.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2018-11-27T00:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "texto/pdf";
+  :technicalSize "954368";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/30266/manuseiominimo-180312182603.pdf";
+  :technicalInstallationRemarks "baixe o arquivo manuseiominimo-180312182603.pdf e abra em qualquer leitor de PDF."@pt-BR;
+  :technicalOtherPlatformRequirements "qualquer programa que leia pdf"@pt-BR;
+  :educationalTypicalAgeRange "adultos, sem faixa etária definida"@pt-BR;
+  :educationalDescription "Apresentar aos profissionais de saúde condutas que auxiliem na redução de estímulos nocivos; minimizem o estresse e a dor causados aos recém-nascidos devido a manuseios excessivos, promovendo neuroproteção; melhorem a qualidade de vida e diminuam os riscos de sequelas em menores de 1500 kg."@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/15490";
+  :relationResourceDescription "IFF"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription """Este material faz parte do Portal de Boas Práticas em Saúde da Mulher, da Criança e do Adolescente do IFF/Fiocruz. Com informações para: Auxiliar na redução de estímulos nocivos.
+Minimizar o estresse e a dor causados aos recém-nascidos devido a manuseios excessivos, promovendo neuroproteção.
+Melhorar a qualidade de vida e diminuir os riscos de sequelas em
+menores de 1500g."""@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "618.920028";
+  :classificationTaxonPathTaxonEntry "tratamento intensivo pediátrico"@pt-BR;
+  :classificationDescription "explicação sobre conduta e cuidados com o manuseio de recém-nascidos com peso igual a 1500 gramasna UTIN"@pt-BR;
+  :classificationKeyword "unidades de terapia intensiva neonatal"@pt-BR, "recém-nascido prematuro"@pt-BR,
+    "pediatria"@pt-BR;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/30266"^^xsd:anyURI;
+  dc:language "pt-BR"^^dc:language;
+  dc:coverage "Brasil"@pt-BR;
+  dc:type "Lecture";
+  dc:format "texto/pdf";
+  dc:rights "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  dc:relation "IFF"@pt-BR;
+  dc:creator """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-2598-4242\\nTITLE:
+Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:fiocruz@fiocruz.br\\nEND:VCARD\\n , BEGIN:VCARD\\nFN:Instituto Nacional de Saúde da Mulher, da Criança e do Adolescente Fernandes Figueira\\
+NTEL:+55-021-)2554-1700\\nTITLE:
+Phytobios\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:info@centroflora.com.br\\nEND:VCARD\\n""";
+  dc:othercontributor """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-2598-4242\\nTITLE:
+Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:fiocruz@fiocruz.br\\nEND:VCARD\\n , BEGIN:VCARD\\nFN:Instituto Nacional de Saúde da Mulher, da Criança e do Adolescente Fernandes Figueira\\
+NTEL:+55-021-)2554-1700\\nTITLE:
+Phytobios\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:info@centroflora.com.br\\nEND:VCARD\\n, Author""" .
+
+data:OA004 a :LearningObject;
+  dc:title "Fiocruz no Ar - Os riscos do consumo de antibióticos sem receita médica"@pt-BR;
+  dc:description "Podcast que integra o projeto Fiocruz no Ar."@pt-BR;
+  :generalStruture :Collection;
+  :generalAggregationLevel :Level2;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Provider;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :Browser;
+  :technicalRequirementOrCompositeName :Any;
+  :educationalInteractivityType :Expositive;
+  :educationalLearningResourceType :Interview;
+  :educationalInteractivityLevel :Low;
+  :educationalSemanticDensity :Medium;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Training;
+  :educationalDifficulty :Easy;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :EducationalObjective;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/33461"^^xsd:anyURI;
+  :generalTitle "Fiocruz no Ar - Os riscos do consumo de antibióticos sem receita médica"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  :generalDescription "Podcast que integra o projeto Fiocruz no Ar."@pt-BR;
+  :generalKeyword "antibióticos"@pt-BR, "medicamento sem receita"@pt-BR, "auto-medicação"@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2019-06-11T00:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "áudio/mp3";
+  :technicalSize "5284823040";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/33461/FIOCRUZ_ANTIBIOTICO_SEM_RECEITA_OS%20RISCOS.mp3";
+  :technicalInstallationRemarks "baixe o arquivo FIOCRUZ_ANTIBIOTICO_SEM_RECEITA_OS RISCOS.mp3abra em qualquer leitor de áudio ou agregador de Podcast."@pt-BR;
+  :technicalOtherPlatformRequirements "qualquer programa que leia mp3"@pt-BR;
+  :technicalDuration "PT02M45S"^^xsd:duration;
+  :educationalTypicalAgeRange "adultos, sem faixa etária definida"@pt-BR;
+  :educationalTypicalLearningTime "PT02M45S"^^xsd:duration;
+  :educationalDescription "Maya Sangawa, jornalista autônoma, convidada pela Vice-Presidência de Educação, Informação e Comunicação para colaborar na produção de cinco áudios (podcast) da série Fiocruz no Ar: 1. Infecção Hospitalar; 2. Tuberculose 01 - Diagnóstico e tratamento; 3. Tuberculose 02 - Tuberculose resistente; 4. Uso correto do antibiótico e 5. Os riscos do consumo de antibióticos sem receita médica (Projeto VPEIC 004-Fio-17-2-54-39)."@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/40761";
+  :relationResourceDescription "ICICT – Áudio"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription "podcast com entrevista com Maya Sangawa, jornalista autônoma, convidada pela Vice-Presidência de Educação, Informação e Comunicação para colaborar na produção de cinco áudios (podcast) da série Fiocruz no Ar: 1. Infecção Hospitalar; 2. Tuberculose 01 - Diagnóstico e tratamento; 3. Tuberculose 02 - Tuberculose resistente; 4. Uso correto do antibiótico e 5. Os riscos do consumo de antibióticos sem receita médica (Projeto VPEIC 004-Fio-17-2-54-39)"@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "615.40202";
+  :classificationTaxonPathTaxonEntry "medicamentos – prescrição"@pt-BR;
+  :classificationDescription "explicação sobre os perigos da utilização de antibióticos sem receita médica."@pt-BR;
+  :classificationKeyword "automedicação"@pt-BR, "antibióticos"@pt-BR;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/33461"^^xsd:anyURI;
+  dc:language "pt-BR"^^dc:language;
+  dc:coverage "Brasil"@pt-BR;
+  dc:type "Interview";
+  dc:format "áudio/mp3";
+  dc:rights "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  dc:relation "ICICT – Áudio"@pt-BR;
+  dc:othercontributor """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n, Provider""" .
+
+data:OA005 a :LearningObject;
+  dc:title "Fiocruz no Ar - Os riscos do consumo de antibióticos sem receita médica"@pt-BR;
+  dc:description "Vinheta de apresentação do  Fiocruz no Ar."@pt-BR;
+  :generalStruture :Collection;
+  :generalAggregationLevel :Level2;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Provider;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :Browser;
+  :technicalRequirementOrCompositeName :Any;
+  :educationalInteractivityType :Expositive;
+  :educationalLearningResourceType :Figure;
+  :educationalInteractivityLevel :Low;
+  :educationalSemanticDensity :Low;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Training;
+  :educationalDifficulty :Easy;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :EducationalObjective;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/33461"^^xsd:anyURI;
+  :generalTitle "Fiocruz no Ar - Os riscos do consumo de antibióticos sem receita médica"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  :generalDescription "Vinheta de apresentação do  Fiocruz no Ar."@pt-BR;
+  :generalKeyword "podcast"@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Queiroz, Claudete Fernandes de\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Freyre, Éder de Almeida\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2019-06-11T00:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "imagem/png";
+  :technicalSize "357580";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/33461/PROJETO_FIOCRUZ_NO_AR_Riscos_consumo_antibi%c3%b3ticos_sem_receita_m%c3%a9dica.png";
+  :technicalInstallationRemarks "baixe o arquivo PROJETO_FIOCRUZ_NO_AR_Riscos_consumo_antibi%c3%b3ticos_sem_receita_m%c3%a9dica.png e a em qualquer leisistema que leia este formato"@pt-BR;
+  :technicalOtherPlatformRequirements "qualquer programa que leia png"@pt-BR;
+  :educationalTypicalAgeRange "adultos, sem faixa etária definida"@pt-BR;
+  :educationalDescription "figura de abertura para podcast Fiocruz no Ar  - Os riscos do consumo de antibióticos sem receita médica"@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/bitstream/handle/icict/33461/FIOCRUZ_ANTIBIOTICO_SEM_RECEITA_OS%20RISCOS.mp3";
+  :relationResourceDescription "Fiocruz no Ar - Os riscos do consumo de antibióticos sem receita médica"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription "figura da vinheta do podcast “Os riscos do consumo de antibióticos sem receita médica”"@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "615.40202";
+  :classificationTaxonPathTaxonEntry "medicamentos – prescrição"@pt-BR;
+  :classificationDescription "Figura de abertura do Podcast do Projeto Fiocruz no Ar que produz podcasts para serem distribuídos para rádios interessadas em veicular – gratuitamente – informação de qualidade, tendo como referência a expertise de 118 anos da Fundação Oswaldo Cruz - FIOCRUZ, do Ministério da Saúde. A distribuição do material também é feita pelo Whatsapp, para que a informação chegue a um maior número de pessoas"@pt-BR;
+  :classificationKeyword "podcast"@pt-BR;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/33461"^^xsd:anyURI;
+  dc:language "pt-BR"^^dc:language;
+  dc:coverage "Brasil"@pt-BR;
+  dc:type "Figure";
+  dc:format "imagem/png";
+  dc:rights "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  dc:relation "Fiocruz no Ar - Os riscos do consumo de antibióticos sem receita médica"@pt-BR;
+  dc:othercontributor """BEGIN:VCARD\\nFN:Queiroz, Claudete Fernandes de\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Freyre, Éder de Almeida\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n, Provider""" .
+
+data:OA006 a :LearningObject;
+  dc:title "Curso Profissional da Informação e Repositórios"@pt-BR;
+  dc:description """o curso tem como proposta abordar as habilidades e competências necessárias para o
+trabalho desenvolvido nos Repositórios pelos profissionais de informação – os Bibliotecários - que são considerados como gestores do conhecimento, atuando em vários serviços e processos dentro das Bibliotecas e dos Centros de Documentação de
+uma organização."""@pt-BR;
+  :generalStruture :Collection;
+  :generalAggregationLevel :Level4;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Author;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :Browser;
+  :technicalRequirementOrCompositeName :Any;
+  :educationalInteractivityType :Expositive;
+  :educationalLearningResourceType :Slide;
+  :educationalInteractivityLevel :Low;
+  :educationalSemanticDensity :VeryHigh;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Training;
+  :educationalDifficulty :Difficult;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :EducationalObjective;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/48701"^^xsd:anyURI;
+  :generalTitle "Curso Profissional da Informação e Repositórios"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  :generalDescription """o curso tem como proposta abordar as habilidades e competências necessárias para o
+trabalho desenvolvido nos Repositórios pelos profissionais de informação – os Bibliotecários - que são considerados como gestores do conhecimento, atuando em vários serviços e processos dentro das Bibliotecas e dos Centros de Documentação de
+uma organização."""@pt-BR;
+  :generalKeyword "repositório"@pt-BR, "profissional da informação."@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2021-08-23T03:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "texto/pdf";
+  :technicalSize "5435817";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/48701/Curso_Profissional_RI_13082021.pdf";
+  :technicalInstallationRemarks "baixe o arquivo Curso_Profissional_RI_13082021.pdf e abra em qualquer programa que abra este formato"@pt-BR;
+  :technicalOtherPlatformRequirements "qualquer programa que leia pdf"@pt-BR;
+  :educationalTypicalAgeRange "adultos, sem faixa etária definida"@pt-BR;
+  :educationalTypicalLearningTime "PT02H00M"^^xsd:duration;
+  :educationalDescription "Abordar as habilidades e competências necessárias para o trabalho desenvolvido nos Repositórios pelos profissionais de informação – os Bibliotecários."@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/12005";
+  :relationResourceDescription "ICICT - REA – Texto"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription "“A Rede Sudeste de Repositórios Institucionais (Sudeste/RIAA) realizou no dia 13/08/2021 o sétimo curso intitulado \"Profissional da Informação e Repositórios\" ministrado pelos Mestres Claudete Fernandes de Queiroz e Éder de Almeida Freyre ambos da Fiocruz. O treinamento é resultado de um projeto da Rede chamado \"Montagem de Cursos\", que tem como objetivo oferecer diferentes capacitações aos membros das instituições que fazem parte da Sudeste/RIAA.”"@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "023.2";
+  :classificationTaxonPathTaxonEntry "bibliotecários, consultores, analistas de sistemas"@pt-BR;
+  :classificationDescription "A aula tem como proposta abordar as habilidades e competências necessárias para o trabalho desenvolvido nos Repositórios pelos profissionais de informação – os Bibliotecários - que são considerados como gestores do conhecimento, atuando em vários serviços e processos dentro das Bibliotecas e dos Centros de Documentação de uma organização."@pt-BR;
+  :classificationKeyword "bibliotecários"@pt-BR, "repositórios"@pt-BR;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/48701"^^xsd:anyURI;
+  dc:language "pt-BR"^^dc:language;
+  dc:coverage "Brasil"@pt-BR;
+  dc:type "Slide";
+  dc:format "texto/pdf";
+  dc:rights "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  dc:relation "ICICT - REA – Texto"@pt-BR;
+  dc:creator """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  dc:othercontributor """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n, Author""" .
+
+data:OA007 a :LearningObject;
+  dc:title "Curso Profissional da Informação e Repositórios"@pt-BR;
+  dc:description "Figura para divulgação do Curso Profissional da Informação e Repositórios"@pt-BR;
+  :generalStruture :Collection;
+  :generalAggregationLevel :Level2;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Author;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :Browser;
+  :technicalRequirementOrCompositeName :Any;
+  :educationalInteractivityType :Expositive;
+  :educationalLearningResourceType :Figure;
+  :educationalInteractivityLevel :Low;
+  :educationalSemanticDensity :VeryLow;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Training;
+  :educationalDifficulty :VeryEasy;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :EducationalObjective;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/48701"^^xsd:anyURI;
+  :generalTitle "Curso Profissional da Informação e Repositórios"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  :generalDescription "Figura para divulgação do Curso Profissional da Informação e Repositórios"@pt-BR;
+  :generalKeyword "repositório"@pt-BR, "profissional da informação."@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2021-08-23T03:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "imagem/jpg";
+  :technicalSize "79534";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/48701/curso_profissional_RI_13082021.jpg";
+  :technicalInstallationRemarks "baixe o arquivo Curso_Profissional_RI_13082021.jpgabra em qualquer programa que abra este formato"@pt-BR;
+  :technicalOtherPlatformRequirements "qualquer programa que leia jpg"@pt-BR;
+  :educationalTypicalAgeRange "adultos, sem faixa etária definida"@pt-BR;
+  :educationalDescription "Divulgar o Curso profissional da informação e repositórios"@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/bitstream/handle/icict/48701/Curso_Profissional_RI_13082021.pdf";
+  :relationResourceDescription "ICICT - REA – Texto"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription "“A Rede Sudeste de Repositórios Institucionais (Sudeste/RIAA) realizou no dia 13/08/2021 o sétimo curso intitulado \"Profissional da Informação e Repositórios\" ministrado pelos Mestres Claudete Fernandes de Queiroz e Éder de Almeida Freyre ambos da Fiocruz. O treinamento é resultado de um projeto da Rede chamado \"Montagem de Cursos\", que tem como objetivo oferecer diferentes capacitações aos membros das instituições que fazem parte da Sudeste/RIAA.”"@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "023.2";
+  :classificationTaxonPathTaxonEntry "bibliotecários, consultores, analistas de sistemas"@pt-BR;
+  :classificationDescription "A aula tem como proposta abordar as habilidades e competências necessárias para o trabalho desenvolvido nos Repositórios pelos profissionais de informação – os Bibliotecários - que são considerados como gestores do conhecimento, atuando em vários serviços e processos dentro das Bibliotecas e dos Centros de Documentação de uma organização."@pt-BR;
+  :classificationKeyword "bibliotecários"@pt-BR, "repositórios"@pt-BR;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/48701"^^xsd:anyURI;
+  dc:language "pt-BR"^^dc:language;
+  dc:coverage "Brasil"@pt-BR;
+  dc:type "Figure";
+  dc:format "imagem/jpg";
+  dc:rights "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  dc:relation "ICICT - REA – Texto"@pt-BR;
+  dc:creator """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  dc:othercontributor """BEGIN:VCARD\\nFN:Fundação Oswaldo Cruz\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n, Author""" .
+
+data:OA008 a :LearningObject;
+  dc:title "Desafio Ágora 2030"@pt-BR;
+  dc:description "O Desafio Ágora 2030 é um jogo que acontece em edições temáticas associadas à Agenda 2030 dos Objetivos do Desenvolvimento Sustentável. Ao participar, o jogador transforma o povoado Ágora, em missões colaborativas para solucionar diversos problemas relacionados a temas da Agenda 2030."@pt-BR;
+  :generalStruture :Collection;
+  :generalAggregationLevel :Level3;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Author;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :OperatingSystem;
+  :technicalRequirementOrCompositeName :Android;
+  :educationalInteractivityType :Active;
+  :educationalLearningResourceType :Game;
+  :educationalInteractivityLevel :VeryHigh;
+  :educationalSemanticDensity :VeryHigh;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Other;
+  :educationalDifficulty :Difficult;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :EducationalObjective;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/35768"^^xsd:anyURI;
+  :generalTitle "Desafio Ágora 2030"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  :generalDescription "O Desafio Ágora 2030 é um jogo que acontece em edições temáticas associadas à Agenda 2030 dos Objetivos do Desenvolvimento Sustentável. Ao participar, o jogador transforma o povoado Ágora, em missões colaborativas para solucionar diversos problemas relacionados a temas da Agenda 2030."@pt-BR;
+  :generalKeyword "jogo"@pt-BR, "sustentabilidade."@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Martins, Cláudia\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2019-09-22T03:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "application/zip";
+  :technicalSize "34812723";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/35768/agora2030-app-master.zip";
+  :technicalInstallationRemarks "Pacote de arquivos para sistemas mobile compactados no formato zip. Está depositado no Arca apenas para memória não tendo como instalá-lo ou rodá-lo a não ser instalando pelas lojas oficiais do Android ou IOS. Para baixar e instalar acesse a Play Store: https://play.google.com/store/apps/details?id=br.org.agora2030 Ou pela App Store: https://apps.apple.com/us/app/%C3%A1gora-2030/id1307124118?l=pt&ls=1"@pt-BR;
+  :technicalOtherPlatformRequirements "smarthphone ou tablet"@pt-BR;
+  :technicalDuration "PT60M00S"^^xsd:duration;
+  :educationalTypicalAgeRange "adequado para crianças com mais de 7 anos"@pt-BR;
+  :educationalTypicalLearningTime "PT60M00S"^^xsd:duration;
+  :educationalDescription "Compreender a importância das soluções e trabalho colaborativo para enfrentamento de problemas atuais e emergentes."@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/15587";
+  :relationResourceDescription "Presidência Fiocruz - REA - Material Multimídia"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription "“O Desafio Ágora 2030 é um jogo que acontece em edições temáticas associadas à Agenda 2030 dos Objetivos do Desenvolvimento Sustentável. Ao participar, o jogador transforma o povoado Ágora, em missões colaborativas para solucionar diversos problemas relacionados a temas da Agenda 2030.”)"@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "333.7150";
+  :classificationTaxonPathTaxonEntry "desenvolvimento sustentável"@pt-BR;
+  :classificationDescription "O Desafio Ágora 2030 é um jogo que acontece em edições temáticas associadas à Agenda 2030 dos Objetivos do Desenvolvimento Sustentável. Ao participar, o jogador transforma o povoado Ágora, em missões colaborativas para solucionar diversos problemas relacionados a temas da Agenda 2030"@pt-BR;
+  :classificationKeyword "desenvolvimento sustentável"@pt-BR;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/35768"^^xsd:anyURI;
+  dc:language "pt-BR"^^dc:language;
+  dc:coverage "Brasil"@pt-BR;
+  dc:type "Game";
+  dc:format "application/zip";
+  dc:rights "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  dc:relation "Presidência Fiocruz - REA - Material Multimídia"@pt-BR;
+  dc:creator """BEGIN:VCARD\\nFN:Martins, Cláudia\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  dc:othercontributor """BEGIN:VCARD\\nFN:Martins, Cláudia\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n, Author""" .
+
+data:OA009 a :LearningObject;
+  dc:title "campus virtual de saúde pública (cvsp/opas): uma rede de conhecimento e formação em saúde pública"@pt-BR;
+  dc:description "Capítulo do E-book - Acesso Aberto: da visão à ação: contextos, cenários e práticas - organizado por Madalena Carvalho, publicado pelo repositório da Universidade Aberta - Lisboa, sobre o Campus Virtual de Saúde Pública (CVSP) de autoria de Ana Furniel, Ana Paula Mendonça e Rosane Mendes da Vice-Presidência de Educação, Informação e Comunicação (VPEIC/Fiocruz). O Campus Virtual de Saúde Pública (CVSP) é um espaço para desenvolver cooperação interdisciplinar no campo de formação em saúde pública, uma rede de instituições que compartilham cursos, recursos educacionais e aulas virtuais de forma aberta. Um espaço comunicacional e de aprendizagem, resultado de uma parceria entre a OPAS e os países da região das Américas. Uma rede descentralizada de indivíduos, instituições e organizações que compartilham cursos, recursos, serviços e atividades de educação com o objetivo comum de fortalecer as competências da força de trabalho em saúde pública. Faz uso intensivo de novas tecnologias de informação e comunicação, e educação em saúde tornando-se um espaço de criatividade e inovação. Considerando as premissas da sustentabilidade, educação à distância, modelos de aprendizagem, acesso aberto, redes de formação e recursos educacionais, destacamos neste capítulo a experiência brasileira do Campus Virtual de Saúde Pública (CVSP) da Organização Panamericana de Saúde (OPAS), coordenada pela Fiocruz – Fundação Oswaldo Cruz no Brasil. A iniciativa integra instituições, países e pessoas e garante as ações através de modelos tecnológicos, de governança e pedagógicos, que reforçam o acesso aberto aos recursos educacionais, e uma aprendizagem em rede."@pt-BR;
+  :generalStruture :Atomic;
+  :generalAggregationLevel :Level1;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Author;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :Browser;
+  :technicalRequirementOrCompositeName :Any;
+  :educationalInteractivityType :Expositive;
+  :educationalLearningResourceType :NarrativeText;
+  :educationalInteractivityLevel :Low;
+  :educationalSemanticDensity :Medium;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Other;
+  :educationalDifficulty :Difficult;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :EducationalObjective;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/32166"^^xsd:anyURI;
+  :generalTitle "campus virtual de saúde pública (cvsp/opas): uma rede de conhecimento e formação em saúde pública"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  :generalDescription "Capítulo do E-book - Acesso Aberto: da visão à ação: contextos, cenários e práticas - organizado por Madalena Carvalho, publicado pelo repositório da Universidade Aberta - Lisboa, sobre o Campus Virtual de Saúde Pública (CVSP) de autoria de Ana Furniel, Ana Paula Mendonça e Rosane Mendes da Vice-Presidência de Educação, Informação e Comunicação (VPEIC/Fiocruz). O Campus Virtual de Saúde Pública (CVSP) é um espaço para desenvolver cooperação interdisciplinar no campo de formação em saúde pública, uma rede de instituições que compartilham cursos, recursos educacionais e aulas virtuais de forma aberta. Um espaço comunicacional e de aprendizagem, resultado de uma parceria entre a OPAS e os países da região das Américas. Uma rede descentralizada de indivíduos, instituições e organizações que compartilham cursos, recursos, serviços e atividades de educação com o objetivo comum de fortalecer as competências da força de trabalho em saúde pública. Faz uso intensivo de novas tecnologias de informação e comunicação, e educação em saúde tornando-se um espaço de criatividade e inovação. Considerando as premissas da sustentabilidade, educação à distância, modelos de aprendizagem, acesso aberto, redes de formação e recursos educacionais, destacamos neste capítulo a experiência brasileira do Campus Virtual de Saúde Pública (CVSP) da Organização Panamericana de Saúde (OPAS), coordenada pela Fiocruz – Fundação Oswaldo Cruz no Brasil. A iniciativa integra instituições, países e pessoas e garante as ações através de modelos tecnológicos, de governança e pedagógicos, que reforçam o acesso aberto aos recursos educacionais, e uma aprendizagem em rede."@pt-BR;
+  :generalKeyword "gestão do conhecimento para a pesquisa em saúde"@pt-BR, "repositórios institucionais."@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Furniel, Ana Cristina da Matta\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Furniel, Mendonça, Ana Paula Bernardo\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Silva, Rosane Mendes da\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2019-03-19T03:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "texto/pdf";
+  :technicalSize "2401239";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/32166/E_book_Ana%20Furniel.pdf";
+  :technicalInstallationRemarks "baixe o arquivo manuseiominimo-E_book_Ana Furniel.pdf e abra em qualquer leitor de PDF."@pt-BR;
+  :educationalTypicalAgeRange "adultos, sem faixa etária definida"@pt-BR;
+  :educationalDescription "Fortalecer a formação profissional em saúde pública, por meio do uso intensivo de tecnologias de informação e comunicação (TICs)"@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/15588";
+  :relationResourceDescription "Presidência Fiocruz - REA – Texto"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription "“Fortalecer a formação profissional em saúde pública, por meio do uso intensivo de tecnologias de informação e comunicação (TICs).”)"@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "658.4058";
+  :classificationTaxonPathTaxonEntry "gestão do conhecimento"@pt-BR;
+  :classificationDescription "Fortalecer a formação profissional em saúde pública, por meio do uso intensivo de tecnologias de informação e comunicação (TICs)"@pt-BR;
+  :classificationKeyword "gestão do conhecimento"@pt-BR, "informação em saúde"@pt-BR;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/32166"^^xsd:anyURI;
+  dc:language "pt-BR"^^dc:language;
+  dc:coverage "Brasil"@pt-BR;
+  dc:type "NarrativeText";
+  dc:format "texto/pdf";
+  dc:rights "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  dc:relation "Presidência Fiocruz - REA – Texto"@pt-BR;
+  dc:creator """BEGIN:VCARD\\nFN:Furniel, Ana Cristina da Matta\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Furniel, Mendonça, Ana Paula Bernardo\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Silva, Rosane Mendes da\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  dc:othercontributor """BEGIN:VCARD\\nFN:Furniel, Ana Cristina da Matta\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Furniel, Mendonça, Ana Paula Bernardo\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Silva, Rosane Mendes da\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n, Author""" .
+
+data:OA010 a :LearningObject;
+  dc:title "curso inteligência artificial documental: aumento de eficiência e qualidade"@pt-BR;
+  dc:description "o curso aborda os avanços da inteligência artificial aplicada a área de documentação, apresentando ferramentas/resultados e discutindo o potencial uso em algumas situações na área documental necessárias para o trabalho desenvolvido nos Repositórios pelos profissionais de informação – os Bibliotecários."@pt-BR;
+  :generalStruture :Collection;
+  :generalAggregationLevel :Level4;
+  :lifeCycleStatus :Final;
+  :lifeCycleContributeRole :Author;
+  :metaMetadataContributeRole :Creator;
+  :technicalRequirementOrCompositeType :Browser;
+  :technicalRequirementOrCompositeName :Any;
+  :educationalInteractivityType :Expositive;
+  :educationalLearningResourceType :NarrativeText;
+  :educationalInteractivityLevel :Low;
+  :educationalSemanticDensity :High;
+  :educationalIntendedEndUserRole :Learner;
+  :educationalContext :Training;
+  :educationalDifficulty :Difficult;
+  :rightsCost :No;
+  :rightsCopyrightandOtherRestrictions :Yes;
+  :relationKind :Ispartof;
+  :classificationPurpose :EducationalObjective;
+  :generalIdentifierCatalog "URI";
+  :generalIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/50574"^^xsd:anyURI;
+  :generalTitle "curso inteligência artificial documental: aumento de eficiência e qualidade"@pt-BR;
+  :generalLanguage "pt-BR"^^xsd:language;
+  :generalDescription "o curso aborda os avanços da inteligência artificial aplicada a área de documentação, apresentando ferramentas/resultados e discutindo o potencial uso em algumas situações na área documental necessárias para o trabalho desenvolvido nos Repositórios pelos profissionais de informação – os Bibliotecários."@pt-BR;
+  :generalKeyword "inteligência artificial documental"@pt-BR, "educação em saúde"@pt-BR,
+    "documento"@pt-BR;
+  :generalCoverage "Brasil"@pt-BR;
+  :lifeCycleVersion "nenhum"@pt-BR;
+  :lifeCycleContributeEntity """BEGIN:VCARD\\nFN:Oliveira, Elias de\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Pirovani, Juliana\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  :lifeCycleContributeDate "2021-12-29T03:00:00Z"^^xsd:date;
+  :metaMetadataIdentifierCatalog "LOM";
+  :metaMetadataIdentifierEntry "https://ieeexplore.ieee.org/document/9262118"^^xsd:anyURI;
+  :metaMetadataContributeEntity """BEGIN:VCARD\\nFN:IEEE Computer Society\\
+NTEL:+1 732 465 5871\\nTITLE:
+IEEE Foundation\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:jdonate@ieee.org\\nEND:VCARD\\n”""";
+  :metaMetadataContributeDate "2020-09-24T03:00:00Z"^^xsd:date;
+  :metaMetadataMetadataSchema "LOMv1.0";
+  :metaMetadataLanguage "en"^^xsd:language;
+  :technicalFormat "texto/pdf";
+  :technicalSize "68943872";
+  :technicalLocation "https://www.arca.fiocruz.br/bitstream/handle/icict/50574/Curso_sobre_Inteligencia_Artificial_Documental_Aumento_de_Eficiencia_Qualidade.pdf";
+  :technicalInstallationRemarks "baixe o arquivo Curso_sobre_Inteligencia_Artificial_Documental_Aumento_de_Eficiencia_Qualidade.pdf e abra em qualquer leitor de PDF."@pt-BR;
+  :technicalOtherPlatformRequirements "qualquer programa que leia pdf"@pt-BR;
+  :educationalTypicalAgeRange "adultos, sem faixa etária definida"@pt-BR;
+  :educationalTypicalLearningTime "PT03H00M"^^xsd:duration;
+  :educationalDescription "Abordar os avanços da inteligência artificial aplicada a área de documentação, apresentando ferramentas/resultados e discutindo o potencial uso em algumas situações na área documental necessárias para o trabalho desenvolvido nos Repositórios pelos profissionais de informação – os Bibliotecários.)"@pt-BR;
+  :educationalLanguage "pt-BR"^^xsd:language;
+  :rightsDescription "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  :relationResourceIdentifierCatalog "URI";
+  :relationResourceIdentifierEntry "https://www.arca.fiocruz.br/handle/icict/12005";
+  :relationResourceDescription "ICICT - REA – Texto"@pt-BR;
+  :annotationEntity """BEGIN:VCARD\\nFN:Viviane Bessa Lopes Alvarenga\\
+nTEL:+55-27-9994-18243\\nTITLE:
+Biblioteca Ceforr\\, Bibliotecária\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:viviane.alvarenga@ifes.edu.br\\nEND:VCARD\\n""";
+  :annotationDate "2023-02-25T03:00:00Z"^^xsd:date;
+  :annotationDescription "“A proposta de um curso com os seguintes objetivos: 1) Dar uma visão geral da área, em particular no contexto que envolva o processamento de linguagem natural (Natural Language Processing – NLP); 2) Apresentar algumas dessas ferramentas/resultados e discutir potencial uso em algumas situações na área documental; 3) Discutir potencial aplicações de nosso próprios resultados nos problemas da Fiocruz.”)"@pt-BR;
+  :classificationTaxonPathSource """Dewey 
+Decimal Classification (DDC)"""@en;
+  :classificationTaxonPathTaxonId "006.3";
+  :classificationTaxonPathTaxonEntry "inteligência artificial"@pt-BR;
+  :classificationDescription "Abordar os avanços da inteligência artificial aplicada a área de documentação, apresentando ferramentas/resultados e discutindo o potencial uso em algumas situações na área documental necessárias para o trabalho desenvolvido nos Repositórios pelos profissionais de informação – os Bibliotecários."@pt-BR;
+  :classificationKeyword "inteligência artificial documental"@pt-BR, "repositórios institucionais"@pt-BR;
+  dc:identifier "https://www.arca.fiocruz.br/handle/icict/50574"^^xsd:anyURI;
+  dc:language "pt-BR"^^dc:language;
+  dc:coverage "Brasil"@pt-BR;
+  dc:type "NarrativeText";
+  dc:format "texto/pdf";
+  dc:rights "Licença Creative Commons Não Comercial – CC-BY-NC. O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores. Regido pela  Política de Acesso Aberto ao Conhecimento da Fiocruz."@pt-BR;
+  dc:relation "ICICT - REA – Texto"@pt-BR;
+  dc:creator """BEGIN:VCARD\\nFN:Oliveira, Elias de\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Pirovani, Juliana\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n""";
+  dc:othercontributor """BEGIN:VCARD\\nFN:Oliveira, Elias de\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n;  BEGIN:VCARD\\nFN:Pirovani, Juliana\\
+NTEL:+55-021-3865-3131\\nTITLE:
+Icict/Fiocruz\\, Assistant\\n 
+EMAIL\\;TYPE=INTERN\\
+nET:arca@fiocruz.br\\nEND:VCARD\\n, Author""" .
