@@ -1,0 +1,1018 @@
+@prefix : <http://dados.ufes.br/lomieee/onto#> .
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix wdo: <http://www.wikidata.org/ontology#> .
+@prefix data: <http://dados.ufes.br/lomieee/data#> .
+@prefix gn: <https://sws.geonames.org/> .
+@prefix wde: <http://www.wikidata.org/entity/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+
+<http://dados.ufes.br/lomieee/onto#> a owl:Ontology .
+
+<http://dados.ufes.br/lomieee#> a owl:Ontology;
+  rdfs:label "OntoLOM-IEEE";
+  rdfs:comment "Ontologia desenvolvida como parte da dissertação de Mestrado do PPGCI/UFES da aluna Viviane Bessa Lopes Alvarenga"@pt-BR;
+  owl:versionInfo "1.0";
+  dct:title "Ontologia aplicada a Objetos de Aprendizagem com base no Padrão LOM da IEEE/2020"@pt-BR;
+  dct:contributor "Henrique M. Cristovao";
+  dct:description "Ontologia operacional aplicada a Objetos de Aprendizagem com base no Padrão LOM da IEEE/2020"@pt-BR;
+  dct:creator "Viviane Bessa Lopes Alvarenga";
+  dct:created "2023-02-01"^^xsd:date;
+  dct:modified "2023-03-07"^^xsd:date;
+  cc:licence "https://creativecommons.org/licenses/by-sa/4.0/"^^xsd:anyURI .
+
+:LearningObject a owl:Class;
+  rdfs:label "Learning Object"@en, "Objeto de Aprendizagem"@pt-BR;
+  owl:equivalentClass wdo:Q1062461 .
+
+:GeneralStruture a skos:ConceptScheme;
+  skos:prefLabel "General Struture"@en, "Estrutura Geral"@pt-BR;
+  skos:note "Estrutura organizacional subjacente do objeto de aprendizagem"@pt-BR .
+
+:GeneralAggregationLevel a skos:ConceptScheme;
+  skos:prefLabel "General Aggregation Level"@en, "Nível de Granularidade"@pt-BR;
+  skos:note "Granularidade funcional desse objeto de aprendizagem"@pt-BR .
+
+:LifeCycleStatus a skos:ConceptScheme;
+  skos:prefLabel "Life Cycle Status"@en, "Status do Ciclo de Vida"@pt-BR;
+  skos:note "status ou condição de conclusão deste objeto de aprendizagem"@pt-BR .
+
+:LifeCycleContributeRole a skos:ConceptScheme;
+  skos:prefLabel "Life Cycle Contribute Role"@en, "Papel do Contribuidor"@pt-BR;
+  skos:note "Papel do contribuidor. No mínimo, o(s) Autor(es) do objeto de aprendizagem deve ser descrito"@pt-BR .
+
+:MetaMetadataContributeRole a skos:ConceptScheme;
+  skos:prefLabel "MetaMetadata Contribute Role"@en, "Papel do Contribuidor do Metadado"@pt-BR;
+  skos:note "Papel do contribuidor. No mínimo, o(s) Criador(es) do metadado do objeto de aprendizagem deve ser descrito"@pt-BR .
+
+:TechnicalRequirementOrCompositeName a skos:ConceptScheme;
+  skos:prefLabel "Technical Requirement OrComposite Name"@en, "Nome do requisito ou requisito composto"@pt-BR;
+  skos:note "Nome da tecnologia necessária para usar esse objeto de aprendizagem. O valor para estes dados podem derivar do 4.1:Formato"@pt-BR .
+
+:TechnicalRequirementOrCompositeType a skos:ConceptScheme;
+  skos:prefLabel "Technical Requirement OrComposite Type"@en, "Tipo do requisito ou requisito composto"@pt-BR;
+  skos:note "Tipo de tecnologia necessária para usar este objeto de aprendizagem, por exemplo, hardware, software, rede, etc."@pt-BR .
+
+:EducationalInteractivityType a skos:ConceptScheme;
+  skos:prefLabel "Educational Interactivity Type"@en, "Tipo do interatividade"@pt-BR;
+  skos:note "Modo predominante de aprendizado suportado por este objeto de aprendizagem. Ex: aprendizagem “ativa” é suportado por conteúdo que induz diretamente a ação produtiva do aluno."@pt-BR .
+
+:EducationalLearningResourceType a skos:ConceptScheme;
+  skos:prefLabel "Educational Learning Resource Type"@en, "Tipo de recurso de aprendizagem"@pt-BR;
+  skos:note "Tipo específico de objeto de aprendizagem. O tipo mais dominante deve ser o primeiro. NOTA 28 — Os termos do vocabulário são definido como no OED:1989 e como usado por comunidades educativas de prática."@pt-BR .
+
+:EducationalInteractivityLevel a skos:ConceptScheme;
+  skos:prefLabel "Educational Interactivity Level"@en, "Grau de interatividade"@pt-BR;
+  skos:note "O grau de interatividade que caracteriza esse OA. Interatividade neste contexto refere-se ao grau em que o aluno pode influenciar o aspecto ou comportamento do OA. NOTA 29 — esta escala é significativo dentro do contexto de uma comunidade de prática."@pt-BR .
+
+:EducationalSemanticDensity a skos:ConceptScheme;
+  skos:prefLabel "Educational Semantic Density"@en, "Grau de densidade semântica"@pt-BR;
+  skos:note " A densidade semântica de um OA pode ser estimado em termos de seu tamanho, extensão ou – no caso de recursos cronometrados, como áudio ou vídeo– duração. É independente de sua dificuldade. É melhor ilustrado com exemplos de expositivo material, embora possa ser usado com recursos ativos também. NOTA 31— esta escala é significativo dentro do contexto de uma comunidade de prática]"@pt-BR .
+
+:EducationalIntendedEndUserRole a skos:ConceptScheme;
+  skos:prefLabel "Educational Intended End User Role"@en, "Papel do usuário final pretendido"@pt-BR;
+  skos:note " Usuário(s) principal(is) para o(s) qual(is) este OA foi projetado, o mais dominante primeiro. NOTA 32— Um aluno trabalha com um OA para aprender algo. Um autor cria ou publica um objeto de aprendizagem. Um gerente gerencia a entrega desse OA, por exemplo, uma universidade ou faculdade. Ondocumento para um gerente é tipicamente um currículo. NOTA 33— Para descrever a função de usuário final pretendida por meio do habilidades que o usuário pretende dominar, ou as tarefas a que se destina ser capaz de realizar, a categoria 9: A classificação pode ser usada."@pt-BR .
+
+:EducationalContext a skos:ConceptScheme;
+  skos:prefLabel "Educational Context"@en, "Contexto educacional"@pt-BR;
+  skos:note " O principal ambiente dentro do qual o aprendizado e o uso desse OA se destina. NOTA 34 — Boas práticas sugeridas é usar um dos valores do valor espaço e usar uma instância adicional de este elemento de dados para maior refinamento"@pt-BR .
+
+:EducationalDifficulty a skos:ConceptScheme;
+  skos:prefLabel "Educational Difficulty"@en, "Nível de dificuldade"@pt-BR;
+  skos:note " Quão difícil é trabalhar com ou através deste OA para o típico público-alvo pretendido. NOTA 37— O “ alvo típico público” pode ser caracterizado por dados elementos 5.6:Educational. Contexto e 5.7:Educational.TypicalAgeRange."@pt-BR .
+
+:RightsCost a skos:ConceptScheme;
+  skos:prefLabel "Rights Cost"@en, "Custo"@pt-BR;
+  skos:note " Se o uso desse objeto de aprendizagem requer pagamento."@pt-BR .
+
+:RightsCopyrightandOtherRestrictions a skos:ConceptScheme;
+  skos:prefLabel "Rights Copyright and Other Restrictions"@en, "Direitos Autorais e Outras Restrições"@pt-BR;
+  skos:note " Se direitos autorais ou outras restrições aplicam-se ao uso deste objeto de aprendizagem."@pt-BR .
+
+:RelationKind a skos:ConceptScheme;
+  skos:prefLabel "Relation Kind"@en, "Natureza da relação"@pt-BR;
+  skos:note " Natureza da relação entre esse OA e o objeto de aprendizagem alvo, identificado por 7.2:Relation.Resource. Baseado no Dublin Core."@pt-BR .
+
+:ClassificationPurpose a skos:ConceptScheme;
+  skos:prefLabel "Classification Purpose"@en, "Propósito de classificação"@pt-BR;
+  skos:note " O propósito de classificar este objeto de aprendizagem."@pt-BR .
+
+:Atomic a skos:Concept;
+  skos:inScheme :GeneralStruture;
+  skos:topConceptOf :GeneralStruture;
+  skos:prefLabel "Atomic"@en, "Atômico"@pt-BR .
+
+:Collection a skos:Concept;
+  skos:inScheme :GeneralStruture;
+  skos:topConceptOf :GeneralStruture;
+  skos:prefLabel "Collection"@en, "Coleção"@pt-BR .
+
+:Networked a skos:Concept;
+  skos:inScheme :GeneralStruture;
+  skos:topConceptOf :GeneralStruture;
+  skos:prefLabel "Networked"@en, "Em Rede"@pt-BR .
+
+:Hierarchical a skos:Concept;
+  skos:inScheme :GeneralStruture;
+  skos:topConceptOf :GeneralStruture;
+  skos:prefLabel "Hierarchical"@en, "Hierárquico"@pt-BR .
+
+:Linear a skos:Concept;
+  skos:inScheme :GeneralStruture;
+  skos:topConceptOf :GeneralStruture;
+  skos:prefLabel "Linear"@en, "Linear"@pt-BR .
+
+:Level1 a skos:Concept;
+  skos:inScheme :GeneralAggregationLevel;
+  skos:topConceptOf :GeneralAggregationLevel;
+  skos:prefLabel "1" .
+
+:Level2 a skos:Concept;
+  skos:inScheme :GeneralAggregationLevel;
+  skos:topConceptOf :GeneralAggregationLevel;
+  skos:prefLabel "2" .
+
+:Level3 a skos:Concept;
+  skos:inScheme :GeneralAggregationLevel;
+  skos:topConceptOf :GeneralAggregationLevel;
+  skos:prefLabel "3" .
+
+:Level4 a skos:Concept;
+  skos:inScheme :GeneralAggregationLevel;
+  skos:topConceptOf :GeneralAggregationLevel;
+  skos:prefLabel "4" .
+
+:Draft a skos:Concept;
+  skos:inScheme :LifeCycleStatus;
+  skos:topConceptOf :LifeCycleStatus;
+  skos:prefLabel "Draft"@en, "Rascunho"@pt-BR .
+
+:Final a skos:Concept;
+  skos:inScheme :LifeCycleStatus;
+  skos:topConceptOf :LifeCycleStatus;
+  skos:prefLabel "Final"@en, "Final"@pt-BR .
+
+:Revised a skos:Concept;
+  skos:inScheme :LifeCycleStatus;
+  skos:topConceptOf :LifeCycleStatus;
+  skos:prefLabel "Revised"@en, "Revisado "@pt-BR .
+
+:Unavailable a skos:Concept;
+  skos:inScheme :LifeCycleStatus;
+  skos:topConceptOf :LifeCycleStatus;
+  skos:prefLabel "Unavailable"@en, "Indisponível"@pt-BR .
+
+:Author a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole, :EducationalIntendedEndUserRole;
+  skos:topConceptOf :LifeCycleContributeRole, :EducationalIntendedEndUserRole;
+  skos:prefLabel "Author"@en, "Autor"@pt-BR .
+
+:Publisher a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Publisher"@en, "Publicador"@pt-BR .
+
+:Unknown a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Unknown"@en, "Desconhecido"@pt-BR .
+
+:Initiator a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Initiator"@en, "Iniciador"@pt-BR .
+
+:Terminator a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Terminator"@en, "terminador"@pt-BR .
+
+:Validator a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole, :MetaMetadataContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole, :MetaMetadataContributeRole;
+  skos:prefLabel "validador"@en, "validador"@pt-BR, "Validator"@en, "Validador"@pt-BR .
+
+:Editor a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Editor"@en, "Editor"@pt-BR .
+
+:Graphical a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Graphical"@en, "Gráfico"@pt-BR .
+
+:Designer a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Designer"@en, "Designer"@pt-BR .
+
+:Technical a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Technical"@en, "Técnico"@pt-BR .
+
+:Implementer a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Implementer"@en, "Implementador"@pt-BR .
+
+:Content a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Content"@en, "Conteudista"@pt-BR .
+
+:Provider a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Provider"@en, "Fornecedor"@pt-BR .
+
+:TechnicalValidator a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Technical validator"@en, "Validador técnico"@pt-BR .
+
+:EducationalValidator a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Educational validator "@en, "Validador educacional"@pt-BR .
+
+:ScriptWriter a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Script writer"@en, "Roteirista"@pt-BR .
+
+:InstructionalDesigner a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Instructional designer"@en, "Designer Instrucional"@pt-BR .
+
+:SubjectMatterExpert a skos:Concept;
+  skos:inScheme :LifeCycleContributeRole;
+  skos:topConceptOf :LifeCycleContributeRole;
+  skos:prefLabel "Subject matter expert"@en, "Especialista no assunto"@pt-BR .
+
+:Creator a skos:Concept;
+  skos:inScheme :MetaMetadataContributeRole;
+  skos:topConceptOf :MetaMetadataContributeRole;
+  skos:prefLabel "Creator"@en, "Criador"@pt-BR .
+
+:OperatingSystem a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeType;
+  skos:topConceptOf :TechnicalRequirementOrCompositeType;
+  skos:prefLabel "Operating system"@en, "Sistema operacional"@pt-BR .
+
+:Browser a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeType;
+  skos:topConceptOf :TechnicalRequirementOrCompositeType;
+  skos:prefLabel "Browser"@en, "Navegador"@pt-BR .
+
+:PcDos a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Pc-Dos"@en, "Pc-Dos"@pt-BR .
+
+:MsWindows a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Ms-windows"@en, "Ms-windows"@pt-BR .
+
+:MacOS a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "MacOS"@en, "MacOS"@pt-BR .
+
+:Unix a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Unix"@en, "Unix"@pt-BR .
+
+:OS a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "OS"@en, "OS"@pt-BR .
+
+:Android a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Android"@en, "Android"@pt-BR .
+
+:Any a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Any"@en, "Qualquer um"@pt-BR .
+
+:NetscapeCommunicator a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Netscape communicator"@en, "Netscape communicator"@pt-BR .
+
+:MSInternetExplorer a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "MS-internet explorer"@en, "MS-internet explorer"@pt-BR .
+
+:Opera a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Opera"@en, "Opera"@pt-BR .
+
+:Amaya a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Amaya"@en, "Amaya"@pt-BR .
+
+:Chrome a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Chrome"@en, "Chrome"@pt-BR .
+
+:MozillaFirefox a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Mozilla Firefox"@en, "Mozilla Firefox"@pt-BR .
+
+:MicrosoftEdge a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Microsoft Edge"@en, "Microsoft Edge"@pt-BR .
+
+:Safari a skos:Concept;
+  skos:inScheme :TechnicalRequirementOrCompositeName;
+  skos:topConceptOf :TechnicalRequirementOrCompositeName;
+  skos:prefLabel "Safari"@en, "Safari"@pt-BR .
+
+:Active a skos:Concept;
+  skos:inScheme :EducationalInteractivityType;
+  skos:topConceptOf :EducationalInteractivityType;
+  skos:prefLabel "Active"@en, "Ativo"@pt-BR .
+
+:Expositive a skos:Concept;
+  skos:inScheme :EducationalInteractivityType;
+  skos:topConceptOf :EducationalInteractivityType;
+  skos:prefLabel "Expositive"@en, "Expositivo"@pt-BR .
+
+:Mixed a skos:Concept;
+  skos:inScheme :EducationalInteractivityType;
+  skos:topConceptOf :EducationalInteractivityType;
+  skos:prefLabel "Mixed"@en, "Misturado"@pt-BR .
+
+:Exercise a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Exercise"@en, "Exercício"@pt-BR .
+
+:Simulation a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Simulation"@en, "Simulado"@pt-BR .
+
+:Questionnaire a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Questionnaire"@en, "Questionário"@pt-BR .
+
+:Diagram a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Diagram"@en, "Diagrama"@pt-BR .
+
+:Game a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Game"@en, "Jogo"@pt-BR .
+
+:Figure a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Figure"@en, "Figura"@pt-BR .
+
+:Graph a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Gráfico"@pt-BR, "Graph"@en .
+
+:Index a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Index"@en, "Índice"@pt-BR .
+
+:Slide a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Slide"@en, "Slide"@pt-BR .
+
+:Table a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Table"@en, "Tabela"@pt-BR .
+
+:NarrativeText a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Narrative text"@en, "Texto narrativo"@pt-BR .
+
+:ExamText a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Exam"@en, "Prova"@pt-BR .
+
+:ExperimentText a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Experiment"@en, "Experimento"@pt-BR .
+
+:ProblemStatementText a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Problem Statement"@en, "Declaração do problema"@pt-BR .
+
+:SelfAssessment a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Self Assessment"@en, "Auto-avaliação"@pt-BR .
+
+:Lecture a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Lecture"@en, "Palestra"@pt-BR .
+
+:Interview a skos:Concept;
+  skos:inScheme :EducationalLearningResourceType;
+  skos:topConceptOf :EducationalLearningResourceType;
+  skos:prefLabel "Interview"@en, "Entrevista"@pt-BR .
+
+:VeryLow a skos:Concept;
+  skos:inScheme :EducationalInteractivityLevel, :EducationalSemanticDensity;
+  skos:topConceptOf :EducationalInteractivityLevel, :EducationalSemanticDensity;
+  skos:prefLabel "Very low"@en, "Muito baixo"@pt-BR .
+
+:Low a skos:Concept;
+  skos:inScheme :EducationalInteractivityLevel, :EducationalSemanticDensity;
+  skos:topConceptOf :EducationalInteractivityLevel, :EducationalSemanticDensity;
+  skos:prefLabel "Low"@en, "Baixo"@pt-BR .
+
+:Medium a skos:Concept;
+  skos:inScheme :EducationalInteractivityLevel, :EducationalSemanticDensity, :EducationalDifficulty;
+  skos:topConceptOf :EducationalInteractivityLevel, :EducationalSemanticDensity, :EducationalDifficulty;
+  skos:prefLabel "Medium"@en, "Médio"@pt-BR .
+
+:High a skos:Concept;
+  skos:inScheme :EducationalInteractivityLevel, :EducationalSemanticDensity;
+  skos:topConceptOf :EducationalInteractivityLevel, :EducationalSemanticDensity;
+  skos:prefLabel "High"@en, "Alto"@pt-BR .
+
+:VeryHigh a skos:Concept;
+  skos:inScheme :EducationalInteractivityLevel, :EducationalSemanticDensity;
+  skos:topConceptOf :EducationalInteractivityLevel, :EducationalSemanticDensity;
+  skos:prefLabel "Very high"@en, "Muito Alto"@pt-BR .
+
+:Teacher a skos:Concept;
+  skos:inScheme :EducationalIntendedEndUserRole;
+  skos:topConceptOf :EducationalIntendedEndUserRole;
+  skos:prefLabel "Teacher"@en, "Professor(a)"@pt-BR .
+
+:Learner a skos:Concept;
+  skos:inScheme :EducationalIntendedEndUserRole;
+  skos:topConceptOf :EducationalIntendedEndUserRole;
+  skos:prefLabel "Learner"@en, "Aluno"@pt-BR .
+
+:Manager a skos:Concept;
+  skos:inScheme :EducationalIntendedEndUserRole;
+  skos:topConceptOf :EducationalIntendedEndUserRole;
+  skos:prefLabel "Manager"@en, "Gerente"@pt-BR .
+
+:School a skos:Concept;
+  skos:inScheme :EducationalContext;
+  skos:topConceptOf :EducationalContext;
+  skos:prefLabel "School"@en, "escola"@pt-BR .
+
+:HigherEducation a skos:Concept;
+  skos:inScheme :EducationalContext;
+  skos:topConceptOf :EducationalContext;
+  skos:prefLabel "Higher Education"@en, "Ensino superior"@pt-BR .
+
+:Training a skos:Concept;
+  skos:inScheme :EducationalContext;
+  skos:topConceptOf :EducationalContext;
+  skos:prefLabel "Training"@en, "Treinamento"@pt-BR .
+
+:Other a skos:Concept;
+  skos:inScheme :EducationalContext;
+  skos:topConceptOf :EducationalContext;
+  skos:prefLabel "Other"@en, "Outros"@pt-BR .
+
+:VeryEasy a skos:Concept;
+  skos:inScheme :EducationalDifficulty;
+  skos:topConceptOf :EducationalDifficulty;
+  skos:prefLabel "Very easy"@en, "Muito Fácil"@pt-BR .
+
+:Easy a skos:Concept;
+  skos:inScheme :EducationalDifficulty;
+  skos:topConceptOf :EducationalDifficulty;
+  skos:prefLabel "Easy"@en, "Fácil"@pt-BR .
+
+:Difficult a skos:Concept;
+  skos:inScheme :EducationalDifficulty;
+  skos:topConceptOf :EducationalDifficulty;
+  skos:prefLabel "Difficult"@en, "Difícil"@pt-BR .
+
+:VeryDifficult a skos:Concept;
+  skos:inScheme :EducationalDifficulty;
+  skos:topConceptOf :EducationalDifficulty;
+  skos:prefLabel "Very difficult"@en, "Muito Difícil"@pt-BR .
+
+:Yes a skos:Concept;
+  skos:inScheme :RightsCost, :RightsCopyrightandOtherRestrictions;
+  skos:topConceptOf :RightsCost, :RightsCopyrightandOtherRestrictions;
+  skos:prefLabel "Yes"@en, "Sim"@pt-BR .
+
+:No a skos:Concept;
+  skos:inScheme :RightsCost, :RightsCopyrightandOtherRestrictions;
+  skos:topConceptOf :RightsCost, :RightsCopyrightandOtherRestrictions;
+  skos:prefLabel "No"@en, "Não"@pt-BR .
+
+:Ispartof a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Is part of"@en, "É parte de"@pt-BR .
+
+:Haspart a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Has part"@en, "Tem parte"@pt-BR .
+
+:Isversionof a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Is version of"@en, "É a versão de"@pt-BR .
+
+:Hasversion a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Has version"@en, "Tem versão"@pt-BR .
+
+:Isformatof a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Is format of"@en, "É formato de"@pt-BR .
+
+:Hasformat a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Has format"@en, "Tem formato"@pt-BR .
+
+:References a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "References"@en, "Referências"@pt-BR .
+
+:Isreferencedby a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Is referenced by"@en, "É referenciado por"@pt-BR .
+
+:Isbasedon a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Is base don"@en, "é baseado em"@pt-BR .
+
+:Isbasisfor a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Is basis for"@en, "É base para"@pt-BR .
+
+:Requires a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Requires"@en, "Requer"@pt-BR .
+
+:Isrequiredby a skos:Concept;
+  skos:inScheme :RelationKind;
+  skos:topConceptOf :RelationKind;
+  skos:prefLabel "Is required by"@en, "É exigido por"@pt-BR .
+
+:Discipline a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Discipline"@en, "Disciplina"@pt-BR .
+
+:Idea a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Idea"@en, "Ideia"@pt-BR .
+
+:Prerequisite a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Prerequisite"@en, "Pré-requisito"@pt-BR .
+
+:EducationalObjective a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Educational objective"@en, "Objetivo educacional"@pt-BR .
+
+:Accessibility a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Accessibility"@en, "Acessibilidade"@pt-BR .
+
+:Restrictions a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Restrictions"@en, "Restrições"@pt-BR .
+
+:EducationalLevel a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Educational level"@en, "Nível educacional"@pt-BR .
+
+:SkillLevel a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Skill level"@en, "Nível de habilidade"@pt-BR .
+
+:SecurityLevel a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Security level"@en, "Nível de segurança"@pt-BR .
+
+:Competency a skos:Concept;
+  skos:inScheme :ClassificationPurpose;
+  skos:topConceptOf :ClassificationPurpose;
+  skos:prefLabel "Competency"@en, "Competência"@pt-BR .
+
+:generalStruture a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem estrutura geral"@pt-BR, "has general structure"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:generalAggregationLevel a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem nível de granularidade"@pt-BR, "has level of granularity"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:lifeCycleStatus a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem status do ciclo de vida"@pt-BR, "has life cycle status"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:lifeCycleContributeRole a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem função de contribuição do Ciclo de Vida"@pt-BR, "has a life cycle contribution role"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:metaMetadataContributeRole a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem papel do Contribuidor do Metadado"@pt-BR, "has metadata contributor role"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:technicalRequirementOrCompositeType a owl:AsymmetricProperty, owl:ObjectProperty,
+    owl:FunctionalProperty, owl:IrreflexiveProperty;
+  rdfs:label "tem tipo do requisito ou requisito composto"@pt-BR, "has requirement type or composite requirement"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:technicalRequirementOrCompositeName a owl:AsymmetricProperty, owl:ObjectProperty,
+    owl:FunctionalProperty, owl:IrreflexiveProperty;
+  rdfs:label "tem nome do requisito ou requisito composto"@pt-BR, "has requirement name or composite requirement"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:educationalInteractivityType a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem tipo do interatividade"@pt-BR, "has type of interactivity"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:educationalLearningResourceType a owl:AsymmetricProperty, owl:ObjectProperty, owl:IrreflexiveProperty;
+  rdfs:label "tem tipo de recurso de aprendizagem"@pt-BR, "has type of learning resource"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:type .
+
+:educationalInteractivityLevel a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem grau de interatividade"@pt-BR, "has interactivity level"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:educationalSemanticDensity a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem densidade semântica"@pt-BR, "has semantic density"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:educationalIntendedEndUserRole a owl:AsymmetricProperty, owl:ObjectProperty, owl:IrreflexiveProperty;
+  rdfs:label "tem papel do usuário final pretendido"@pt-BR, "has intended end user role"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:educationalContext a owl:AsymmetricProperty, owl:ObjectProperty, owl:IrreflexiveProperty;
+  rdfs:label "tem contexto educacional"@pt-BR, "has educational context"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:educationalDifficulty a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem nível de dificuldade"@pt-BR, "has difficulty level"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:rightsCost a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem custo"@pt-BR, "has cost"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:rightsCopyrightandOtherRestrictions a owl:AsymmetricProperty, owl:ObjectProperty,
+    owl:FunctionalProperty, owl:IrreflexiveProperty;
+  rdfs:label "tem direitos autorais e outras restrições"@pt-BR, "has copyright and other restrictions"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:relationKind a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem tipo de relação"@pt-BR, "has relation kind"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:classificationPurpose a owl:AsymmetricProperty, owl:ObjectProperty, owl:FunctionalProperty,
+    owl:IrreflexiveProperty;
+  rdfs:label "tem propósito de classificação"@pt-BR, "has classification purpose"@en;
+  rdfs:range skos:Concept;
+  rdfs:domain :LearningObject .
+
+:generalIdentifierCatalog a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "identificador do catálogo"@pt-BR, "catalog identifier "@en;
+  rdfs:comment "Nome ou designador do esquema de identificação ou catalogação"@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject ;
+  owl:equivalentProperty bf:Identifier .
+
+:generalIdentifierEntry a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "entrada do Identificador"@pt-BR, "identifier entry "@en;
+  rdfs:comment "O valor do identificador dentro do esquema de identificação ou catalogação que designa ou identifica este OA. Uma string específica de namespace"@pt-BR;
+  rdfs:range xsd:anyURI;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:identifier ;
+  owl:equivalentProperty bf:identifiedBy .
+
+:generalTitle a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "título"@pt-BR, "title"@en;
+  rdfs:comment "Nome dado a este objeto de aprendizagem"@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:title ;
+  owl:equivalentProperty bf:title .
+
+:generalLanguage a owl:DatatypeProperty;
+  rdfs:label "idioma"@pt-BR, "language"@en;
+  rdfs:comment "A linguagem humana primária ou idiomas usados dentro deste OA de comunicar ao destinatário do utilizador. NOTA 1— Uma indexação ou catalogação ferramenta pode fornecer um padrão útil. NOTA 2— Se o objeto de aprendizagem não conteúdo lingual (como no caso de uma imagem da Mona Lisa, por exemplo), então o valor apropriado para este elemento de dados seria nenhuma. NOTA 3— Este elemento de dados diz respeito a linguagem do objeto de aprendizagem. Elemento de dados 3.4:Meta-Metadados. A linguagem diz respeito à linguagem da instância de metadados"@pt-BR;
+  rdfs:range xsd:language;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:language ;
+  owl:equivalentProperty bf:descriptionLanguage .
+
+:generalDescription a owl:DatatypeProperty;
+  rdfs:label "descrição"@pt-BR, "description"@en;
+  rdfs:comment "Uma descrição textual do conteúdo desse OA. NOTA 6— Esta descrição não precisa ser em linguagem e termos apropriados para os usuários do objeto de aprendizagem sendo descrito. A descrição deve ser em linguagem e termos apropriados para aqueles que decidem se o OA que está sendo descrito é adequado e relevante para os usuários."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:description ;
+  owl:equivalentProperty bf:content .
+
+:generalKeyword a owl:DatatypeProperty;
+  rdfs:label "palavra-chave"@pt-BR, "keyword"@en;
+  rdfs:comment "Uma palavra-chave ou frase descrevendo o tópico desse OA. Este elemento de dados não deve ser usado para características que podem ser descritas por outros elementos de dados."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:subject .
+
+:generalCoverage a owl:DatatypeProperty;
+  rdfs:label "cobertura"@pt-BR, "coverage"@en;
+  rdfs:comment "O tempo, cultura, geografia ou região para qual este OA se aplica. A extensão ou escopo do conteúdo do OA. A cobertura normalmente incluir localização espacial (um nome de lugar ou coordenadas geográficas), temporal período (uma etiqueta de período, data ou intervalo de data) ou jurisdição (como um nome entidade administrativa). Recomendado a melhor prática é selecionar um valor de um vocabulário controlado (por exemplo, o Tesauro de Nomes Geográficos[TGN]) e que, quando apropriado, lugares nomeados ou períodos de tempo sejam usados em preferência a identificadores numéricos como conjuntos de coordenadas ou intervalos de datas.NOTA 7— Esta é a definição deo conjunto de elementos de metadados do Dublin Core https://www.dublincore.org/specifications/dublin-core/dcmi-terms/elements11/coverage/"@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:coverage ;
+  owl:equivalentProperty bf:temporalCoverage  .
+
+:lifeCycleVersion a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "versão"@pt-BR, "version"@en;
+  rdfs:comment "A edição deste objeto de aprendizagem."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
+:lifeCycleContributeEntity a owl:DatatypeProperty;
+  rdfs:label "entidade"@pt-BR, "entity"@en;
+  rdfs:comment "A identificação e as informações sobre entidades (ou seja, pessoas, organizações) contribuindo para esse OA. As entidades devem ser ordenados como mais relevantes primeiro."@pt-BR;
+  rdfs:range xsd:date;
+  rdfs:domain :LearningObject ;
+  owl:equivalentProperty bf:contribution  .
+
+:lifeCycleContributeDate a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "data"@pt-BR, "date"@en;
+  rdfs:comment "A data da contribuição."@pt-BR;
+  rdfs:domain :LearningObject;
+  rdfs:datatype xsd:date .
+
+:metaMetadataIdentifierCatalog a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "catálogo"@pt-BR, "catalog"@en;
+  rdfs:comment "O nome ou designador do esquema de identificação ou catalogação para esta entrada. Um esquema de namespace."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject .
+
+:metaMetadataIdentifierEntry a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "entrada"@pt-BR, "entry"@en;
+  rdfs:comment "O valor do identificador dentro do esquema de identificação ou catalogação que designa ou identifica esses metadados registro. Uma string específica de namespace."@pt-BR;
+  rdfs:range xsd:anyURI;
+  rdfs:domain :LearningObject .
+
+:metaMetadataContributeEntity a owl:DatatypeProperty;
+  rdfs:label "entidade"@pt-BR, "entity"@en;
+  rdfs:comment "A identificação e as informações sobre entidades (ou seja, pessoas,organizações) contribuindo para isso instância de metadados. As entidades devem ser ordenados como mais relevantes primeiro."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject .
+
+:metaMetadataContributeDate a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "data"@pt-BR, "date"@en;
+  rdfs:comment "A data da contribuição."@pt-BR;
+  rdfs:range xsd:date;
+  rdfs:domain :LearningObject .
+
+:metaMetadataMetadataSchema a owl:DatatypeProperty;
+  rdfs:label "esquema"@pt-BR, "schema"@en;
+  rdfs:comment "O nome e a versão da especificação autorizada usada para criar esta instância de metadados. Se vários valores forem fornecidos, então a instância de metadados deve estar em conformidade a vários esquemas de metadados."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject .
+
+:metaMetadataLanguage a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "idioma"@pt-BR, "language"@en;
+  rdfs:comment "Idioma desta instância de metadados. Esse é o idioma padrão para todos os LangString nesta instância de metadados. Se um valor para este elemento de dados não está presente em uma instância de metadados, então não há idioma padrão para valores LangString. NOTA 19— Este elemento de dados diz respeito à linguagem do instância de metadados. Elemento de dados1.3: Geral. A linguagem diz respeito ao linguagem do objeto de aprendizagem."@pt-BR;
+  rdfs:range xsd:language;
+  rdfs:domain :LearningObject .
+
+:technicalFormat a owl:DatatypeProperty;
+  rdfs:label "formato"@pt-BR, "format"@en;
+  rdfs:comment "Tipo(s) de dados técnicos de (todos os componentes deste objeto de aprendizagem. Este elemento de dados deve ser usado para identificar o software necessário para acessar o objeto de aprendizagem."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:format ;
+  owl:equivalentProperty bf:fileType .
+
+:technicalSize a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "tamanho"@pt-BR, "size"@en;
+  rdfs:comment "O tamanho do aprendizado digital objeto em bytes (octetos). o tamanho é representado como um valor decimal (raiz 10). Consequentemente, apenas os dígitos “0” até “9” devem ser usados. A unidade é bytes, não Mbytes, GB, etc. Este elemento de dados deve referir-se ao tamanho real deste objeto de aprendizagem. Se o objeto de aprendizagem é compactado, então este elemento de dados deve se referir para o tamanho não compactado.."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject ;
+  owl:equivalentProperty bf:fileSize .
+
+:technicalLocation a owl:DatatypeProperty;
+  rdfs:label "localização"@pt-BR, "location"@en;
+  rdfs:comment "Uma string que é usada para acessar este objeto de aprendizagem. Ele poderia representar um localização (por exemplo, Recurso Universal Localizador), ou um método que resolva um local (por exemplo, Universal Resource identificador). O primeiro elemento desta lista será o localização preferencial. NOTA 21— Aqui é onde o aprendizado objeto descrito por esses metadados instância está localizada fisicamente.."@pt-BR;
+  rdfs:range xsd:anyURI;
+  rdfs:domain :LearningObject ;
+  owl:equivalentProperty bf:electronicLocator  .
+
+:technicalRequirementOrCompositeMinimumVersion a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "versão mínima"@pt-BR, "minimum version"@en;
+  rdfs:comment "Versão mais baixa possível da necessária tecnologia para usar este objeto de aprendizagem."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject .
+
+:technicalRequirementOrCompositeMaximumVersion a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "versão máxima"@pt-BR, "maximum version"@en;
+  rdfs:comment "Versão mais alta possível da necessária tecnologia para usar este objeto de aprendizagem."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject .
+
+:technicalInstallationRemarks a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "observações de instalação"@pt-BR, "installation remarks"@en;
+  rdfs:comment "Descrição de como instalar esse objeto de aprendizagem."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
+:technicalOtherPlatformRequirements a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "outros requisitos da plataforma"@pt-BR, "other platform requirements"@en;
+  rdfs:comment "Informações sobre outros softwares e requisitos de hardware. NOTA 24— Este elemento destina-se para descrições de requisitos que não pode ser expresso por elemento de dados 4.4:Requisito.Técnico."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
+:technicalDuration a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "duração"@pt-BR, "duration"@en;
+  rdfs:comment "Tempo que um objeto de aprendizado contínuo leva quando jogado na velocidade pretendida. NOTA 25— Este elemento de dados é especialmente útil para sons,filmes ou animações."@pt-BR;
+  rdfs:range xsd:duration;
+  rdfs:domain :LearningObject .
+
+:educationalTypicalAgeRange a owl:DatatypeProperty;
+  rdfs:label "faixa etária típica"@pt-BR, "typical age range"@en;
+  rdfs:comment "Este elemento de dados deve referir-se a idade de desenvolvimento, se isso seria diferente da idade cronológica. NOTA 35— A idade do aluno é importante para encontrar objetos de aprendizagem, especialmente para alunos em idade escolar e seus professores. Quando aplicável, a string deve ser formatado como idade mínima-máxima idade ou idade mínima-. (note que isso é um compromisso entre adicionar três elementos componentes (idade mínima, idade máxima e descrição) e tendo apenas um campo de texto livre.) NOTA 36— Esquemas alternativos para o que este elemento de dados tenta cobrir (como várias idades de leitura ou esquemas de nível, QI ou desenvolvimento medidas de idade) devem ser representadas através da categoria 9:Classificação."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
+:educationalTypicalLearningTime a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "tempo típico de aprendizagem"@pt-BR, "typical learning time"@en;
+  rdfs:comment "Tempo aproximado ou típico que leva para trabalhar com ou através deste objeto de aprendizagem para o público-alvo pretendido típico. NOTA 38— O “ alvo típico público” pode ser caracterizado por dados elementos 5.6:Educational.Contexto e 5.7:Educational.TypicalAgeRange.“PT1H30M”, “PT1M45S"@pt-BR;
+  rdfs:range xsd:duration;
+  rdfs:domain :LearningObject .
+
+:educationalDescription a owl:DatatypeProperty;
+  rdfs:label "Descrição"@pt-BR, "Description"@en;
+  rdfs:comment "Comente como esse OA será usado."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
+:educationalLanguage a owl:DatatypeProperty;
+  rdfs:label "idioma"@pt-BR, "Language"@en;
+  rdfs:comment "A linguagem humana usada pelos típicos usuário pretendido deste objeto de aprendizagem. Exemplo:en,en-GB,de,fr-CA, NOTA 39— Como exemplo, para um objeto de aprendizagem em francês, destinado a falantes de inglês alunos, o valor de 1,3:Geral. O idioma será o francês e o valor de 5,11: Educacional. O idioma será o inglês."@pt-BR;
+  rdfs:range xsd:language;
+  rdfs:domain :LearningObject .
+
+:rightsDescription a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "Descrição"@pt-BR, "Description"@en;
+  rdfs:comment "Comentários sobre as condições de uso deste objeto de aprendizagem."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:rights .
+
+:relationResourceIdentifierCatalog a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "Catálogo"@pt-BR, "Catalog"@en;
+  rdfs:comment "O nome ou designador do esquema de identificação ou catalogação para esta entrada. Um esquema de namespace."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject .
+
+:relationResourceIdentifierEntry a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "Entrada"@pt-BR, "Entry"@en;
+  rdfs:comment "O valor do identificador dentro do esquema de identificação ou catalogação que designa ou identifica o aprendizado alvo objeto. Uma string específica de namespace."@pt-BR;
+  rdfs:range xsd:anyURI;
+  rdfs:domain :LearningObject .
+
+:relationResourceDescription a owl:DatatypeProperty;
+  rdfs:label "Descrição"@pt-BR, "Description"@en;
+  rdfs:comment "Descrição do objeto de aprendizagem de destino."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject;
+  owl:equivalentProperty dc:relation .
+
+:annotationEntity a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "entidade"@pt-BR, "entity"@en;
+  rdfs:comment "Entidade (ou seja, pessoas, organização)que criou esta anotação."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject .
+
+:annotationDate a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "data"@pt-BR, "date"@en;
+  rdfs:comment "Data em que esta anotação foi criada."@pt-BR;
+  rdfs:range xsd:date;
+  rdfs:domain :LearningObject ;
+  owl:equivalentProperty bf:date .
+
+:annotationDescription a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "descrição"@pt-BR, "description"@en;
+  rdfs:comment "O conteúdo desta anotação."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
+:classificationTaxonPathSource a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "fonte"@pt-BR, "source"@en;
+  rdfs:comment "O nome do sistema de classificação.NOTA 41— Uma indexação,ferramenta de catalogação ou consulta pode fornecer as entradas de nível superior de um classificação bem estabelecida, como a Biblioteca do Congresso Classificação (LOC), Universal Classificação Decimal (UDC), Dewey Classificação Decimal (DDC), etc."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject ;
+  owl:equivalentProperty bf:classification .
+
+:classificationTaxonPathTaxonId a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "identificador"@pt-BR, "id"@en;
+  rdfs:comment "O identificador do táxon, como um número ou combinação de letras fornecida pela fonte da taxonomia."@pt-BR;
+  rdfs:range xsd:string;
+  rdfs:domain :LearningObject .
+
+:classificationTaxonPathTaxonEntry a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "entrada"@pt-BR, "entry "@en;
+  rdfs:comment "O identificador do táxon, como um número ou combinação de letras fornecida pela fonte da taxonomia."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
+:classificationDescription a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "descrição"@pt-BR, "description "@en;
+  rdfs:comment "Descrição do objeto de aprendizagem em relação ao referido 9.1:Classificação. Objetivo desta classificação específica, como disciplina, ideia, nível de habilidade, objetivo educacional, etc."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
+:classificationKeyword a owl:DatatypeProperty;
+  rdfs:label "palavra-chave"@pt-BR, "keyword"@en;
+  rdfs:comment "Palavras-chave e frases descritivas do objeto de aprendizagem em relação ao declarado 9.1: Classificação. Objetivo deste específico classificação, como acessibilidade, nível de segurança, etc., mais relevante primeiro."@pt-BR;
+  rdfs:range rdf:langString;
+  rdfs:domain :LearningObject .
+
